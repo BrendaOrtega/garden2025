@@ -29,13 +29,13 @@ export default function Blog({ loaderData }: Route.ComponentProps) {
   return (
     <section className="bg-white">
       <Navbar />
-      <div className="max-w-7xl mx-auto py-20 lg:py-40">
+      <div className="max-w-7xl mx-auto py-16 lg:py-40">
         <div className=" flex justify-center gap-4 h-[112px]">
           <h2 className="text-4xl lg:text-7xl font-title text-center  ">
             Find some
           </h2>
           <img
-            className="w-20 lg:w-32 -mt-3 lg:-mt-6 h-fit"
+            className="w-20 lg:w-32 -mt-3 lg:-mt-6 h-16 md:h-fit"
             src="/cartel1.webp"
           />
           <h2 className="text-4xl lg:text-7xl font-title text-center  ">

@@ -78,7 +78,6 @@ export const ScrollGallery = ({
                 scrollYProgress={springYProgress}
                 key={i}
                 onMouseEnter={() => {
-                  console.log("WWTFFF");
                   setIsHovered(i);
                 }}
                 isPlaying={isHovered === i}

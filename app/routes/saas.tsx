@@ -52,7 +52,7 @@ export default function Saas() {
   return (
     <section className="bg-white">
       <Navbar />
-      <div className="max-w-7xl mx-auto py-24 lg:py-40 px-4 md:px-[5%] xl:px-0">
+      <div className="max-w-7xl mx-auto py-16 lg:py-40 px-4 md:px-[5%] xl:px-0">
         <div className=" flex flex-col lg:flex-row items-center  justify-center gap-4  h-[112px]">
           <h2 className="text-4xl lg:text-7xl font-title text-center  ">
             Take a look at my own

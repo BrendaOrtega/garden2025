@@ -91,7 +91,7 @@ export const Navbar = () => {
         <Link to="/" className=" relative  w-fit">
           {" "}
           <Michi />
-          <div className="absolute flex gap-1 pt-5  left-0  pl-20 top-0 text-xl  font-logo">
+          <div className="absolute flex gap-1 pt-3 md:pt-5  left-0 pl-14 md:pl-20 top-0 text-xl  font-logo">
             <span> Brenda</span>
             <span>GO</span>
           </div>
@@ -128,7 +128,7 @@ export const Navbar = () => {
           />
           <NavItem link="/blog" index={4} isOpen={isOpen} title="Blog" />
           <Link to="/contact">
-            <Button className="mt-20" />
+            <Button className="mt-14" />
           </Link>
         </div>
         <img className="absolute right-0 w-20 bottom-0" src="/yarn.svg" />

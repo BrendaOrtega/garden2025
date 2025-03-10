@@ -18,7 +18,6 @@ import { db } from "~/.server/db";
 import type { Route } from "./+types/blogpost";
 import Markdown from "~/components/MarkDown";
 import { CircularButton } from "~/components/CircularButton";
-import { TracingBeam } from "~/components/TracingBeam";
 
 // export function links() {
 //   return [{ rel: "stylesheet", href: styles }];
@@ -30,7 +29,6 @@ export const loader = async ({ params }: Route.LoaderArgs) => {
       slug: params.slug,
     },
   });
-  console.log("si", post);
   if (!post) {
     throw redirect("/blog");
   }

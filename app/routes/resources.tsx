@@ -215,8 +215,8 @@ export default function Resources() {
   return (
     <section className="bg-white overflow-hidden">
       <Navbar />
-      <div className="max-w-7xl mx-auto pt-20 lg:pt-40 px-4 md:px-[5%] xl:px-0 ">
-        <div className=" flex  items-center justify-center gap-0 lg:gap-4  h-[112px]">
+      <div className="max-w-7xl mx-auto pt-16 lg:pt-40 px-4 md:px-[5%] xl:px-0 ">
+        <div className=" flex flex-col md:flex-row items-center justify-center gap-1 lg:gap-4 h-[112px]">
           <h2 className="text-4xl lg:text-7xl font-title text-center  ">
             Discover an interesting
           </h2>
@@ -279,7 +279,7 @@ const CourseCard = ({
 }) => {
   return (
     <a href={link} target="_blank" rel="noopener noreferrer">
-      <div className="w-[260px] group pb-0  group">
+      <div className="w-[240px] md:w-[260px] group pb-0  group">
         <div className="bg-gray-100 p-0 rounded-4xl relative">
           <img
             className="absolute -top-14  transition-all group-hover:-top-[86px] -left-20 scale-[40%] z-0 "

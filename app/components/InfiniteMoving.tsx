@@ -117,7 +117,7 @@ export const InfiniteMovingCards = ({
                   />
                   <div
                     className={cn(
-                      "bg-black absolute w-full h-20 min-h-20  group-hover:min-h-[160px] opacity-0 group-hover:opacity-100 -bottom-10 rounded-2xl -rotate-6 py-6 px-4 transition-all overflow-hidden",
+                      "bg-black absolute w-full h-20 min-h-20  group-hover:min-h-[160px] group-active:min-h-[160px] opacity-0 group-active:opacity-100  group-hover:opacity-100 -bottom-10 rounded-2xl -rotate-6 py-6 px-4 transition-all overflow-hidden",
                       { "group-hover:min-h-[220px]": item.size === "large" },
                       { "group-hover:min-h-[180px]": item.size === "medium" },
                       {

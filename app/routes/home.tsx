@@ -66,12 +66,12 @@ export default function Home() {
   return (
     <section className="bg-white ">
       <Navbar />
-      <section className="max-w-5xl mx-auto h-[70vh] pb-16  lg:h-[70vh] px-4 xl:px-0 ">
+      <section className="max-w-5xl mx-auto h-[70vh] pb-16  lg:h-[70vh]  ">
         <div className="flex flex-wrap-reverse xl:flex-nowrap items-center justify-between h-full  ">
-          <h1 className="text-4xl xl:text-6xl font-title w-full xl:w-[63%] leading-snug lg:text-left text-center -mt-28 lg:mt-0">
+          <h1 className="text-[32px] xl:text-6xl font-title w-full xl:w-[63%] leading-snug lg:text-left text-center -mt-20 lg:mt-0">
             Hello, I'm Brenda.
             <br /> I'm a{" "}
-            <span className="font-extrabold text-4xl xl:text-6xl text-brand">
+            <span className="font-extrabold text-[32px] xl:text-6xl text-brand">
               <FlipWords
                 words={[
                   "Product Designer",
@@ -293,7 +293,7 @@ export const Footer = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-6 w-full flex justify-center text-graylight/40 text-sm lg:text-base">
+      <div className="absolute bottom-6 w-full flex justify-center text-center text-graylight/40 text-sm lg:text-base">
         © 2025 Brenda González Ortega - All rights reserved.
       </div>
       <div
@@ -556,7 +556,9 @@ const Rotators = ({
           {title}
         </Rotator>
       ))}
-      <motion.h2 className="tracking-wide uppercase">Web development</motion.h2>
+      <motion.h2 className="tracking-wide uppercase text-center">
+        Web development
+      </motion.h2>
     </motion.main>
   );
 };
@@ -575,7 +577,7 @@ const Rotator = ({
   const scale = useTransform(scrollYProgress, range, [1, 0.8]);
   return (
     <motion.h2
-      className="tracking-wide uppercase"
+      className="tracking-wide uppercase text-center"
       style={{ rotateX, opacity, scale }}
     >
       {children}

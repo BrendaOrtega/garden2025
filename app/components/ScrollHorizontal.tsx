@@ -17,18 +17,18 @@ export const ScrollHorizontal = () => {
   useMotionValueEvent(scrollYProgress, "change", (latest) => {});
 
   return (
-    <section className="h-[580vh] lg:h-[580vh]" ref={ref}>
+    <section className="h-[660vh] lg:h-[580vh]" ref={ref}>
       <div className="sticky bg-transparent top-0 w-full overflow-x-hidden ">
         <motion.div
           style={{ x }}
-          className="w-max flex h-screen gap-20 items-center pr-[140vw] lg:pr-[40vw] "
+          className="w-max flex h-screen gap-20 items-center pr-[150vw] lg:pr-[40vw] "
         >
           <div className="w-max flex flex-col lg:flex-row h-screen gap-8 xl:gap-20 items-center bg-black pl-4 lg:pl-0 pt-10 lg:pt-0 ">
-            <div className="w-full xl:w-[340px] ml-0 xl:ml-48 ">
+            <div className="w-full xl:w-[340px] ml-0 xl:ml-48 flex flex-row md:flex-col gap-4 ">
               <h3 className="text-3xl xl:text-4xl font-title md:text-6xl text-white font-bold ">
                 Selected projects
               </h3>
-              <p className="text-lg md:text-xl text-graylight font-light mt-4 lg:mt-12">
+              <p className="text-lg md:text-xl text-graylight font-light mt-2 lg:mt-12">
                 Take a look at my favorites projects
               </p>
             </div>
@@ -41,7 +41,7 @@ export const ScrollHorizontal = () => {
                 tags={["Product Design", "Frontend", "Saas"]}
                 title="EasyBits"
                 description="Unlocking online payments for creatives and digital content professionals"
-                imageClassName="top-40 -right-28 group-hover:-right-20 transition-all "
+                imageClassName="top-20 md:top-40 -right-28 group-hover:-right-20 transition-all "
               />
               <MotionContainer
                 link="/flink"
@@ -140,6 +140,7 @@ export const MotionContainer = ({
       <div
         className={cn(
           "w-[400px] lg:w-[560px] h-[75vh] lg:h-[842px] rounded-[40px] overflow-hidden relative bg-[#E9E9E9] flex items-end group",
+
           {
             "items-center justify-center text-center px-6":
               variant === "invite",
@@ -161,7 +162,7 @@ export const MotionContainer = ({
             </div>
           </Link>
         ) : (
-          <div className={cn(" px-8 pb-20")}>
+          <div className={cn(" px-6 md:px-8 pb-14")}>
             <h2
               className={cn("text-3xl font-bold text-dark", {
                 "text-white": theme === "dark",
@@ -179,9 +180,12 @@ export const MotionContainer = ({
               ))}{" "}
             </div>
             <p
-              className={cn("text-dark  mt-4 text-xl font-subtitle", {
-                "text-graylight ": theme === "dark",
-              })}
+              className={cn(
+                "text-dark  mt-4 text-lg md:text-xl font-subtitle",
+                {
+                  "text-graylight ": theme === "dark",
+                }
+              )}
             >
               {description}
             </p>

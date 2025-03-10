@@ -2,8 +2,10 @@ import { Navbar } from "~/components/Navbar";
 
 export default function Saas() {
   return (
-    <section className="bg-white h-screen lg:min-h-screen relative overflow-hidden">
-      <Navbar />
+    <section className="bg-white min-h-screen  relative overflow-hidden">
+      <div className="fixed w-full">
+        <Navbar />
+      </div>
       <Form />
       <img className="w-14 absolute -bottom-3 right-28" src="/Cat2.gif" />
     </section>
@@ -12,7 +14,7 @@ export default function Saas() {
 
 const Form = () => {
   return (
-    <section className="max-w-2xl  mx-auto py-20 lg:pt-32  ">
+    <section className="max-w-2xl h-full  mx-auto mt-32 lg:mt-48  ">
       <div>
         <div className="flex flex-col items-center gap-4 lg:gap-6 px-4 mb-3 lg:mb-10 text-center">
           <h3 className="text-4xl lg:text-5xl font-title">
