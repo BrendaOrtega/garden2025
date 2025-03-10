@@ -23,6 +23,7 @@ import { cn } from "~/utils/cn";
 import getBasicMetaTags from "~/utils/getBasicMetatags";
 import { Link } from "react-router";
 import { CircularButton } from "~/components/CircularButton";
+import MichiWhite from "~/components/MichiWhite";
 
 export const meta = () =>
   getBasicMetaTags({
@@ -66,12 +67,12 @@ export default function Home() {
   return (
     <section className="bg-white ">
       <Navbar />
-      <section className="max-w-5xl mx-auto h-[70vh] pb-16  lg:h-[70vh]  ">
-        <div className="flex flex-wrap-reverse xl:flex-nowrap items-center justify-between h-full  ">
-          <h1 className="text-[32px] xl:text-6xl font-title w-full xl:w-[63%] leading-snug lg:text-left text-center -mt-20 lg:mt-0">
+      <section className="max-w-5xl mx-auto h-fit pb-12 pt-12  lg:h-[70vh]  ">
+        <div className="flex flex-wrap-reverse md:flex-nowrap items-center justify-between h-full  ">
+          <h1 className="text-[32px] md:text-6xl font-title w-full md:w-[63%] leading-snug lg:text-left text-center mt-6 lg:mt-0">
             Hello, I'm Brenda.
             <br /> I'm a{" "}
-            <span className="font-extrabold text-[32px] xl:text-6xl text-brand">
+            <span className="font-extrabold text-[32px] md:text-6xl text-brand">
               <FlipWords
                 words={[
                   "Product Designer",
@@ -85,7 +86,7 @@ export default function Home() {
             based in México.
           </h1>
 
-          <div className="w-full lg:w-[37%] flex justify-center xl:justify-center">
+          <div className="w-full md:w-[37%] flex justify-center xl:justify-center">
             <img
               className="w-48 lg:w-auto ml-0 xl:ml-32"
               src="/emoji.webp"
@@ -240,7 +241,7 @@ export const Footer = () => {
     node.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <section className="min-h-screen bg-black flex items-center justify-center relative ">
+    <section className="min-h-screen bg-black flex items-center justify-center relative overflow-hidden md:overflow-auto ">
       <div className="text-center text-2xl ">
         <p className="text-lg md:text-xl text-graylight mb-6 font-light">
           The best ideas start as conversations
@@ -298,7 +299,7 @@ export const Footer = () => {
       </div>
       <div
         onClick={handleClick}
-        className="absolute right-0 lg:right-16 bottom-0 lg:bottom-16 "
+        className="absolute -right-6 lg:right-16 bottom-2 lg:bottom-16  "
       >
         <span className=" absolute w-full h-full  grid place-content-center">
           <FaArrowUpLong className="text-white text-2xl mx-auto" />

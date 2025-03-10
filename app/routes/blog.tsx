@@ -10,6 +10,7 @@ import { db } from "~/.server/db";
 import type { Route } from "./+types/blog";
 import type { Post } from "@prisma/client";
 import { Link } from "react-router";
+import { useEffect } from "react";
 
 export const meta = () =>
   getBasicMetaTags({
@@ -25,6 +26,13 @@ export const loader = async () => {
 };
 
 export default function Blog({ loaderData }: Route.ComponentProps) {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
   const { posts } = loaderData;
   return (
     <section className="bg-white">

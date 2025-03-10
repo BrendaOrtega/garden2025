@@ -3,6 +3,7 @@ import { Footer } from "./home";
 import { ScrollGallery } from "~/components/ScrollGallery";
 import getBasicMetaTags from "~/utils/getBasicMetatags";
 import { cn } from "~/utils/cn";
+import { useEffect } from "react";
 
 export const meta = () =>
   getBasicMetaTags({
@@ -49,6 +50,13 @@ const projects = [
 ];
 
 export default function Saas() {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
   return (
     <section className="bg-white">
       <Navbar />

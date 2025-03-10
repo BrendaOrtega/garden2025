@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
-import { motion, useAnimate } from "motion/react";
+import { AnimatePresence, motion, useAnimate } from "motion/react";
 import { Link, useLocation } from "react-router";
 import { Button } from "./Button";
 import Michi from "./Mich";
+import MichiWhte from "./MichiWhite";
+import MichiWhite from "./MichiWhite";
+import { cn } from "~/utils/cn";
 
 const navigation = [
   { name: "Projects", link: "/projects" },
@@ -68,14 +71,20 @@ export const SquigglyUnderline = () => {
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [michi, setMichi] = useState(false);
 
   const toggleMenu = () => {
     if (isOpen) {
       setIsOpen(false);
       animate("#drawer", { y: "-100%" }, { duration: 0.5, type: "tween" });
+      setTimeout(() => {
+        setMichi(false);
+      }, 400);
     } else {
       setIsOpen(true);
       animate("#drawer", { y: "0%" }, { duration: 0.5, type: "tween" });
+
+      setMichi(true);
     }
   };
 
@@ -89,13 +98,43 @@ export const Navbar = () => {
     >
       <nav className="flex relative z-[120] max-w-7xl mx-auto py-2 items-center justify-between ">
         <Link to="/" className=" relative  w-fit">
-          {" "}
-          <Michi />
-          <div className="absolute flex gap-1 pt-3 md:pt-5  left-0 pl-14 md:pl-20 top-0 text-xl  font-logo">
+          <AnimatePresence mode="popLayout">
+            {!michi ? (
+              <motion.div
+                key={12}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              >
+                <Michi />
+              </motion.div>
+            ) : (
+              <motion.div
+                className="ml-1"
+                key={24}
+                style={{
+                  scale: 1.2,
+                }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              >
+                <MichiWhite />
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          <div
+            className={cn(
+              "absolute flex gap-1 pt-3 md:pt-5 text-black left-0 pl-14 md:pl-20 top-0 text-xl  font-logo",
+              { "text-white": isOpen }
+            )}
+          >
             <span> Brenda</span>
             <span>GO</span>
           </div>
         </Link>
+
         <div className="md:flex items-center gap-8 hidden ">
           <SquigglyUnderline />
         </div>
@@ -112,7 +151,7 @@ export const Navbar = () => {
         }}
         className="bg-black bg-cover px-6 inset-0 w-full h-fit pb-24 absolute"
       >
-        <div className="text-center mt-48 text-white">
+        <div className="text-center mt-40 text-white">
           <NavItem
             link="/projects"
             index={1}
@@ -198,7 +237,7 @@ const NavItem = ({
           transform: "translateY(20px)",
           filter: "blur(9px)",
         }}
-        className="text-4xl my-10 font-light"
+        className="text-4xl my-10 font-light font-subtitle"
       >
         {title}
       </h3>

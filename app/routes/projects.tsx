@@ -3,6 +3,7 @@ import { Navbar } from "~/components/Navbar";
 import { Footer } from "./home";
 import { MotionContainer } from "~/components/ScrollHorizontal";
 import getBasicMetaTags from "~/utils/getBasicMetatags";
+import { useEffect } from "react";
 
 export const meta = () =>
   getBasicMetaTags({
@@ -11,6 +12,13 @@ export const meta = () =>
   });
 
 export default function Blog() {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
   return (
     <section className="bg-white">
       <Navbar />
@@ -27,7 +35,7 @@ export default function Blog() {
         <div className="flex justify-between gap-12 lg:gap-20 flex-wrap mt-12 lg:mt-32 ">
           {" "}
           <MotionContainer
-            className="bg-[#B097E3] w-full md:w-[inherit]"
+            className="bg-[#B097E3] w-full md:w-[inherit] h-[580px] lg:h-[842px]"
             id="uno"
             link="/easybits"
             img="/easybits.webp"
@@ -42,17 +50,17 @@ export default function Blog() {
               id="dos"
               img="/flink.webp"
               // className="bg-[#B097E3]"
-              className="bg-[#0CCCB3] w-full md:w-[inherit]"
+              className="bg-[#0CCCB3] w-full md:w-[inherit]  h-[580px] lg:h-[842px]"
               tags={["Product Design", "App", "Fintech"]}
               title="Flink"
               description="Democratizing access to stock market investments in Mexico"
-              imageClassName="top-0 -left-14 group-hover:scale-110 "
+              imageClassName="top-0 -left-10 md:-left-14 group-hover:scale-110 "
             />
           </div>
           <MotionContainer
             link="/denik"
             img="/denik.webp"
-            className="bg-[#FFD25C] w-full md:w-[inherit]"
+            className="bg-[#FFD25C] w-full md:w-[inherit] h-[580px] lg:h-[842px]"
             id="tres"
             tags={["Product Design", "Frontend", "Webapp", "Saas"]}
             title="Deník"
@@ -63,7 +71,7 @@ export default function Blog() {
             <MotionContainer
               link="/token"
               img="/token.webp"
-              className="bg-[#45C893] w-full md:w-[inherit]"
+              className="bg-[#45C893] w-full md:w-[inherit] h-[580px] lg:h-[842px]"
               tags={["UX Design", "App", "Fintech"]}
               title="Constructoken"
               description="Offering financial solutions and construction options for self-produced housing"
@@ -71,7 +79,7 @@ export default function Blog() {
             />
           </div>
           <MotionContainer
-            className="w-full md:w-[inherit]"
+            className="w-full md:w-[inherit] h-[580px] lg:h-[842px]"
             link="/covalto"
             img="/covalto.svg"
             tags={["Product Design", "App", "Fintech"]}
@@ -83,7 +91,7 @@ export default function Blog() {
             <MotionContainer
               link="/reform"
               img="/reform.webp"
-              className="bg-[#B097E3] w-full md:w-[inherit]"
+              className="bg-[#B097E3] w-full md:w-[inherit] h-[580px] lg:h-[842px]"
               tags={["UI Design", "Prototyping", "App", "AI"]}
               title="Reform AI"
               description="Renovate your spaces using artificial intelligence and buy the furniture and services that you need in one place"
@@ -93,7 +101,7 @@ export default function Blog() {
           <MotionContainer
             link="/personal"
             img="/personal.webp"
-            className="bg-[#F2B590] w-full md:w-[inherit]"
+            className="bg-[#F2B590] w-full md:w-[inherit] h-[580px] lg:h-[842px]"
             tags={["Product Design", "App", "Webapp", "Banking"]}
             title="Santander"
             description="Web & Mobile App to access to financial services including payments, transfers and management"
@@ -102,7 +110,7 @@ export default function Blog() {
           <div className="mt-0 lg:mt-16">
             <MotionContainer
               theme="dark"
-              className="bg-[#0E0E10] w-full md:w-[inherit]"
+              className="bg-[#0E0E10] w-full md:w-[inherit] h-[580px] lg:h-[842px]"
               link="/ui"
               img="/ui-fx.webp"
               tags={["Design", "Webapp", "Frontend", "E-learning"]}
@@ -112,7 +120,7 @@ export default function Blog() {
             />
           </div>
           <MotionContainer
-            className="bg-[#F1ABA5] w-full md:w-[inherit]"
+            className="bg-[#F1ABA5] w-full md:w-[inherit] h-[580px] lg:h-[842px]"
             link="/lastplay"
             img="/play.webp"
             tags={["UI Design", "App", "Sports"]}
@@ -124,7 +132,7 @@ export default function Blog() {
             <MotionContainer
               link="/e4pros"
               img="/pros.webp"
-              className="bg-[#A3BC73] w-full md:w-[inherit]"
+              className="bg-[#A3BC73] w-full md:w-[inherit] h-[580px] lg:h-[842px]"
               tags={["UX Design", "Website", "UI Design", "E-learning"]}
               title="English for Professionals"
               description="English courses for all levels, business and tourism orientation or personalized courses"
@@ -132,19 +140,19 @@ export default function Blog() {
             />
           </div>
           <MotionContainer
-            className="bg-[#E9786E] w-full md:w-[inherit]"
+            className="bg-[#E9786E] w-full md:w-[inherit] h-[580px] lg:h-[842px]"
             link="/propiedades"
             img="/projects/inmuebles.webp"
             tags={["Product Design", "Prototyping", "Webapp"]}
             title="Propiedades"
             description="Facilitating the process of buying and selling real estate properties for clients and sellers"
-            imageClassName="left-0 right-0 -top-10 scale-60 md:scale-75 transition-all rounded-xl"
+            imageClassName="left-0 right-0 -top-16 scale-60 md:scale-75 transition-all rounded-xl"
           />
           <div className="mt-0 lg:mt-16">
             <MotionContainer
               link="/fixter"
               img="/projects/org.webp"
-              className="bg-[#85DDCB] w-full md:w-[inherit]"
+              className="bg-[#85DDCB] w-full md:w-[inherit] h-[580px] lg:h-[842px]"
               tags={["Product Design", "Frontend", "Website", "Services"]}
               title="Fixter.org"
               description="Showing the b2b services we offer and our selected projects catalogue "
@@ -152,7 +160,7 @@ export default function Blog() {
             />
           </div>
           <MotionContainer
-            className="bg-[#F85387] w-full md:w-[inherit]"
+            className="bg-[#F85387] w-full md:w-[inherit] h-[580px] lg:h-[842px]"
             img="/projects/potentiia.png"
             link="/potentia"
             tags={["UX/UI Design", "Website", "Frontend"]}
@@ -164,7 +172,7 @@ export default function Blog() {
             <MotionContainer
               link="/azteca"
               img="/projects/azteca.webp"
-              className="bg-[#93E6EB] w-full md:w-[inherit]"
+              className="bg-[#93E6EB] w-full md:w-[inherit] h-[580px] lg:h-[842px]"
               tags={["UX/UI Design", "E-commerce", "Health"]}
               title="Laboratorios Azteca"
               description="Digitizing access to clinical studies through e-commerce "

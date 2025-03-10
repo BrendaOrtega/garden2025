@@ -1,6 +1,14 @@
+import { useEffect } from "react";
 import { Navbar } from "~/components/Navbar";
 
 export default function Saas() {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
   return (
     <section className="bg-white min-h-screen  relative overflow-hidden">
       <div className="fixed w-full">

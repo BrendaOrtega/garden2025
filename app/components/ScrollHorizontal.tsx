@@ -25,7 +25,7 @@ export const ScrollHorizontal = () => {
         >
           <div className="w-max flex flex-col lg:flex-row h-screen gap-8 xl:gap-20 items-center bg-black pl-4 lg:pl-0 pt-10 lg:pt-0 ">
             <div className="w-full xl:w-[340px] ml-0 xl:ml-48 flex flex-row md:flex-col gap-4 ">
-              <h3 className="text-3xl xl:text-4xl font-title md:text-6xl text-white font-bold ">
+              <h3 className="text-3xl xl:text-5xl font-title md:text-6xl text-white font-bold ">
                 Selected projects
               </h3>
               <p className="text-lg md:text-xl text-graylight font-light mt-2 lg:mt-12">
@@ -52,7 +52,7 @@ export const ScrollHorizontal = () => {
                 tags={["Product Design", "Fintech"]}
                 title="Flink"
                 description="Democratizing access to stock market investments in Mexico"
-                imageClassName="top-0 -left-14 group-hover:scale-110 "
+                imageClassName="top-0 -left-8 md:-left-14 group-hover:scale-110 "
               />
 
               <MotionContainer
@@ -63,7 +63,7 @@ export const ScrollHorizontal = () => {
                 tags={["Product Design", "Frontend", "Saas"]}
                 title="Deník"
                 description="The agenda to manage appointments, payments and reminders for entrepreneurs and small businesses"
-                imageClassName="top-20 scale-80 group-hover:scale-90 group-hover:translate-y-10"
+                imageClassName="top-16 md:top-20 scale-80 group-hover:scale-90 group-hover:translate-y-10"
               />
               <MotionContainer
                 link="/token"
@@ -80,7 +80,7 @@ export const ScrollHorizontal = () => {
                 tags={["Product Design", "Fintech"]}
                 title="Covalto"
                 description="The Financial solution to manage expenses for Business"
-                imageClassName="w-[60%] top-54 left-[20%] right-0 bottom-0 group-hover:scale-80 "
+                imageClassName="w-[60%] top-32 md:top-54 left-[20%] right-0 bottom-0 group-hover:scale-80 "
               />
               <MotionContainer
                 link="/personal"
@@ -162,7 +162,7 @@ export const MotionContainer = ({
             </div>
           </Link>
         ) : (
-          <div className={cn(" px-6 md:px-8 pb-14")}>
+          <div className={cn(" px-6 md:px-8 pb-10 md:pb-20")}>
             <h2
               className={cn("text-3xl font-bold text-dark", {
                 "text-white": theme === "dark",

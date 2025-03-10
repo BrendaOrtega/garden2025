@@ -2,6 +2,7 @@ import { Navbar } from "~/components/Navbar";
 import { Footer } from "./home";
 import { InfiniteMovingCards } from "~/components/InfiniteMoving";
 import getBasicMetaTags from "~/utils/getBasicMetatags";
+import { useEffect } from "react";
 
 export const meta = () =>
   getBasicMetaTags({
@@ -212,6 +213,13 @@ const docs = [
   },
 ];
 export default function Resources() {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
   return (
     <section className="bg-white overflow-hidden">
       <Navbar />

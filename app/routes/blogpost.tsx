@@ -126,7 +126,7 @@ export const Suscription = () => {
     node.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <section className="bg-black  py-32 text-center relative px-4 md:px-[5%] xl:px-0">
+    <section className="bg-black  py-32 text-center relative px-4 md:px-[5%] xl:px-0 overflow-hidden md:overflow-auto ">
       <img className="-top-10 right-72 absolute w-24" src="/loader3.gif" />
       <h3 className="text-4xl font-title md:text-6xl text-white font-bold ">
         Enjoying these posts?
@@ -180,7 +180,7 @@ export const Suscription = () => {
 
       <div
         onClick={handleClick}
-        className="absolute right-0 lg:right-16 bottom-0 lg:bottom-16 "
+        className="absolute -right-6 lg:right-16 bottom-2 lg:bottom-16  "
       >
         <span className=" absolute w-full h-full grid place-content-center">
           <FaArrowUpLong className="text-white text-2xl mx-auto" />
