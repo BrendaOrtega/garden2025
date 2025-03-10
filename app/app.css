@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Englebert&display=swap");
+
+@font-face {
+  font-family: "Roobert Light";
+  src: url(/fonts/RoobertLight.otf);
+}
+
+@font-face {
+  font-family: "Roobert Semibold";
+  src: url(/fonts/RoobertSemiBold.otf);
+}
+
+@font-face {
+  font-family: "Roobert Medium";
+  src: url(/fonts/RoobertMedium.otf);
+}
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-dark: #171717;
+  --color-brand: #9346ed;
+  --color-graylight: #747474;
+  --color-flink: #118178;
+  --animate-scrolling: scrolling 70s linear infinite;
+}
+
+.font-logo {
+  font-family: "Englebert", cursive;
+}
+body {
+  background-color: black;
+}
+p {
+  font-family: "Roobert Light";
+}
+.font-title {
+  font-family: "Roobert Semibold";
+}
+
+.font-subtitle {
+  font-family: "Roobert Medium";
+}
+
+.denik {
+  background-image: url("/projects/denik1.webp");
+}
+
+@keyframes scrolling {
+  from {
+    transform: translate(0%);
+  }
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+
+html,
+body {
+  /* @apply bg-white dark:bg-gray-950;
+
+  @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
+  } */
+}
+
+/* Markdown para el blog */
+.markdown p {
+  color: black;
+  font-size: 18px;
+  margin: 24px 0 0 0;
+  font-family: "Roobert Medium";
+  font-weight: lighter;
+}
+
+.markdown a {
+  color: #9346ed;
+  text-decoration: underline;
+  text-decoration-color: #9346ed;
+}
+
+.markdown strong {
+  font-family: "Roobert Semibold";
+}
+
+.markdown code {
+  /* background-clip: text;
+  background: -webkit-linear-gradient(#6cd1d7, #6cd1d7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  font-family: "Roobert Medium";
+  background-color: #c2dee9;
+  border-radius: 2px;
+}
+
+.markdown blockquote {
+  position: relative;
+  padding-left: 24px;
+  font-style: italic;
+  background-color: #9346ed;
+}
+
+.markdown blockquote p {
+  color: #9346ed;
+}
+
+.markdown blockquote::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  background: white;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.markdown li {
+  font-size: 18px;
+  margin: 24px 0 0 0;
+  font-weight: bold;
+  /* color: var(--brand-500); */
+  color: black;
+  margin-left: 20px;
+  font-family: "Roobert Medium";
+  list-style: circle;
+}
+.markdown li::marker {
+  color: #9346ed;
+}
+
+.markdown h2,
+.markdown h1,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6,
+.markdown strong {
+  font-family: "Roobert Semibold";
+  font-weight: bold;
+}
+
+.markdown h1 {
+  font-size: 40px;
+  margin: 32px 0 24px 0;
+  line-height: 1.2;
+  margin-top: 48px;
+}
+
+.markdown h2 {
+  font-size: 32px;
+  margin: 32px 0 24px 0;
+  line-height: 1.2;
+  margin-top: 48px;
+}
+
+.markdown h3 {
+  font-size: 24px;
+  margin: 32px 0 24px 0;
+  line-height: 1.2;
+  margin-top: 48px;
+}

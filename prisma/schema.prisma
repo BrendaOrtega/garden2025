@@ -1,0 +1,26 @@
+datasource db {
+    provider = "mongodb"
+    url      = env("DB")
+}
+
+generator client {
+    provider = "prisma-client-js"
+    binaryTargets = ["native","rhel-openssl-1.0.x"]
+}
+
+model Post {
+    id         String   @id @default(auto()) @map("_id") @db.ObjectId
+    createdAt  DateTime @default(now())
+    updatedAt  DateTime @updatedAt
+    title      String   @unique
+    cover String
+    body       String
+    authorImage   String?
+    authorAt   String
+    tag        String?
+    subTag     String?
+    slug       String   @unique
+    index      Int @unique
+    metaImage   String
+    @@map("posts")
+}
