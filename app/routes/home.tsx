@@ -213,19 +213,19 @@ const GalleryImage = ({
 }) => {
   return (
     <motion.div
-      whileTap={{ cursor: "grabbing" }}
+      whileDrag={{ cursor: "grabbing" }}
       drag
       dragTransition={{ bounceStiffness: 500, bounceDamping: 15 }}
       dragElastic={0.2}
       // dragSnapToOrigin
       dragConstraints={ref}
       className={cn(
-        "w-40 h-28 lg:h-40   bg-white px-1 lg:px-2 pt-1 lg:pt-2 relative cursor-grab   ",
+        "w-40 h-28 lg:h-40  bg-white px-1 lg:px-2 pt-1 lg:pt-2 relative cursor-grab   ",
         className
       )}
     >
       <img
-        className="object-cover w-full h-[70%] lg:h-[75%]  pointer-events-none"
+        className="object-cover pointer-events-none  w-full h-[70%] lg:h-[75%]"
         alt=""
         src={img}
       />

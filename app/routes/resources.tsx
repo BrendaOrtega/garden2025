@@ -23,34 +23,33 @@ const books = [
     title: "Visual Thinking",
     image: "/assets/visual.webp",
     description:
-      "Apende a transimitir información de forma visual (técnicas de dibujo, estructuras, storytelling, etc).",
+      "Te enseña a transimitir información de forma visual (técnicas de dibujo, estructuras, storytelling, etc).",
     rank: 4,
   },
   {
     title: "Lean UX",
     image: "/assets/lean.webp",
     description:
-      "Aplicar algunos pasos de la metodología puede ser muy útil pero otros suenan útopicos por el nivel de madurez del área en muchas empresas e industrias.",
+      "Muestra el step by step de Lean aplicado en UX, algunos pasos de la metodología puede ser muy útiles pero otros suenan útopicos por el nivel de madurez del área en muchas empresas e industrias.",
     rank: 4,
     size: "large",
   },
-  {
-    title: "The Design of Everyday Things",
-    image: "/assets/normal.webp",
-    description:
-      "Apende a transimitir información de forma visual (técnicas de dibujo, estructiras, etc).",
-    rank: 4.8,
-  },
+  // {
+  //   title: "The Design of Everyday Things",
+  //   image: "/assets/normal.webp",
+  //   description: "",
+  //   rank: 4.8,
+  // },
   {
     title: "Dont make me think",
     image: "/assets/krug.webp",
     description:
-      "Un imperdible si quieres conocer las bases de una buena experiencia de usuario.",
+      "Un básico para tener una visión general de la experiencia de usuario en el diseño de productos digitales.",
     rank: 4.8,
   },
   {
     title: "Haz fácil lo imposible",
-    image: "/assets/lean.webp",
+    image: "/assets/facil.webp",
     description:
       "Aprende a realizar pruebas de usuario, desde la estructura, herramientas, duración, guión, y más.",
     rank: 5,
@@ -75,7 +74,7 @@ const books = [
     title: "Microcopy",
     image: "/assets/copy.webp",
     description:
-      "Muy útil si quieres aprender qué es el microcopy y qué lineamientos seguir para definir el copy de una interfaz digital.",
+      "Muy útil si quieres aprender qué es el microcopy y qué lineamientos seguir para definir el copy correctamente de una interfaz digital.",
     rank: 5,
     size: "medium",
   },
@@ -98,7 +97,7 @@ const books = [
     title: "Design Sprint",
     image: "/assets/sprint.webp",
     description:
-      "Te servirá para addentrarte en la metodología, su historia, algunos casos de éxito y el paso a paso para aplicarla.",
+      "Te servirá para adentrarte en la metodología, su historia, algunos casos de éxito y el paso a paso para aplicarla.",
     rank: 4.8,
     size: "medium",
   },
@@ -249,11 +248,11 @@ export default function Resources() {
         />
       </div>
       <div className="mt-12 lg:mt-20 px-4 md:px-[5%] xl:px-0">
-        <h2 className="text-4xl font-title text-left max-w-7xl mx-auto mb-12  ">
+        <h2 className="text-4xl font-title text-left max-w-7xl mx-auto  ">
           Cursos
         </h2>
       </div>
-      <div className="flex gap-12 max-w-7xl mx-auto pb-32 overflow-y-scroll">
+      <div className="flex gap-12 max-w-7xl mx-auto pb-32 overflow-y-scroll pt-12">
         <CourseCard
           title="Diseño de Interfaces"
           link="https://ui.fixtergeek.com/"
@@ -262,15 +261,14 @@ export default function Resources() {
         <CourseCard
           title="Diseño de producto digital con Lean y UX"
           link="https://www.domestika.org/es/courses/1490-diseno-de-producto-digital-con-lean-y-ux"
-          image="https://www.brendago.design/images/resources/curso-ux.png"
+          image="/assets/lean-course.webp"
         />
         <CourseCard
           title="Certificado profesional de Diseño de experiencia del usuario (UX) de Google"
           link="https://grow.google/intl/es-419_us/certificates/ux-design/#?modal_active=none"
           image="https://i.imgur.com/hIOsTlw.png"
         />
-      </div>
-
+      </div>{" "}
       <Footer />
     </section>
   );
@@ -290,10 +288,13 @@ const CourseCard = ({
       <div className="w-[240px] md:w-[260px] group pb-0  group">
         <div className="bg-gray-100 p-0 rounded-4xl relative">
           <img
-            className="absolute -top-14  transition-all group-hover:-top-[86px] -left-20 scale-[40%] z-0 "
+            className="absolute -top-14 z-0  transition-all group-hover:-top-[80px] -left-20 scale-[40%]  "
             src="/loader3.gif"
           />
-          <img className="rounded-2xl w-full h-40 relative z-10" src={image} />
+          <img
+            className="rounded-2xl object-cover w-full h-40 relative z-10"
+            src={image}
+          />
         </div>
         <h3 className="text-lg font-title text-center mt-3">{title}</h3>
       </div>

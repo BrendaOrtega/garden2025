@@ -1,7 +1,5 @@
-// import styles from "~/styles/markdown.css";
 import { HiOutlineArrowSmLeft } from "react-icons/hi";
-// import dbConnection from "~/db/db.server";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 import { Link, redirect, useLoaderData } from "react-router";
 import { AiFillInstagram } from "react-icons/ai";
 import {
@@ -18,10 +16,20 @@ import { db } from "~/.server/db";
 import type { Route } from "./+types/blogpost";
 import Markdown from "~/components/MarkDown";
 import { CircularButton } from "~/components/CircularButton";
+import getBasicMetaTags from "~/utils/getBasicMetatags";
+import { useToast } from "~/hooks/useToaster";
+import { twMerge } from "tailwind-merge";
+import { PiLinkSimpleBold } from "react-icons/pi";
 
-// export function links() {
-//   return [{ rel: "stylesheet", href: styles }];
-// }
+export const meta = ({ data }: Route.MetaArgs) => {
+  const { post } = data;
+  console.log(post.title, "info");
+  return getBasicMetaTags({
+    title: post.title,
+    description: post.body?.slice(0, 60) + "...",
+    image: post.metaImage || undefined,
+  });
+};
 
 export const loader = async ({ params }: Route.LoaderArgs) => {
   const post = await db.post.findUnique({
@@ -45,16 +53,6 @@ export default function Page({ loaderData }: Route.ComponentProps) {
     });
   }, []);
 
-  // HACK PARA ASEGURARSE DE QUE EL TRACING FUNCIONE
-  // useEffect(() => {
-  //   if (localStorage.getItem("initial") === "1") {
-  //     localStorage.removeItem("initial");
-  //   } else {
-  //     localStorage.setItem("initial", "1");
-  //     setTimeout(() => location.reload(), 100);
-  //   }
-  // }, []); //
-
   return (
     <section className="bg-white min-h-screen ">
       <Navbar />
@@ -67,13 +65,13 @@ export default function Page({ loaderData }: Route.ComponentProps) {
         <div className="relative">
           <Link to="/blog">
             <button
-              className="text-gray-600 cursor-pointer bg-gray-100 -left-[88px] top-4 rounded-lg flex justify-center items-center text-2xl
+              className="text-black cursor-pointer bg-gray-100 -left-[88px] top-4 rounded-lg flex justify-center items-center text-2xl
              h-10 w-[56px] absolute"
             >
               <HiOutlineArrowSmLeft />
             </button>
           </Link>
-          <h2 className="px-4 md:px-[5%] xl:px-0 pb-4 underline decoration-brand w-full text-3xl lg:text-5xl md:text-[40px] leading-normal mt-10 md:mt-[inherit] text-black font-title ">
+          <h2 className="px-4 md:px-[5%] xl:px-0 pb-4 underline decoration-brand w-full text-3xl lg:text-4xl md:text-3xl leading-normal mt-10 md:mt-[inherit] text-black font-title ">
             {" "}
             {post.title}
           </h2>
@@ -90,26 +88,19 @@ export default function Page({ loaderData }: Route.ComponentProps) {
               <p className="mb-0 font-bold text-black font-title">
                 Brenda Gonzalez Ortega
               </p>
-              <p className="text-graylight">
-                {/* {post.authorAt} */}
-                @brenda-ort
-              </p>
+              <a
+                href="https://www.linkedin.com/in/brendago/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <p className="text-graylight hover:text-brand">
+                  {/* {post.authorAt} */}
+                  @brenda-ort
+                </p>
+              </a>
             </div>
           </div>
-          <div className="flex gap-2 items-center">
-            <a>
-              <FaFacebookF className="text-sm" />
-            </a>
-            <a>
-              <FaLinkedinIn />
-            </a>
-            <a>
-              <FaXTwitter />
-            </a>
-            <a>
-              <FaLink />
-            </a>
-          </div>
+          <Sharing metalink={post.slug} />
         </div>
         <div className="text-black mb-32 px-4 md:px-[5%] xl:px-0">
           <Markdown>{post.body}</Markdown>
@@ -119,6 +110,78 @@ export default function Page({ loaderData }: Route.ComponentProps) {
     </section>
   );
 }
+
+export const Sharing = ({ metalink }: { metalink: string }) => {
+  const toast = useToast();
+  const link = `https://www.brendago.design/blog/${metalink}`;
+
+  const handleSocialClick = () => {
+    navigator.clipboard.writeText(link);
+    toast.success({ text: "Link copiado", icon: "🪄" });
+  };
+  return (
+    <div className="flex gap-1 items-center">
+      <SocialMedia onClick={handleSocialClick} name="Link">
+        <PiLinkSimpleBold />
+      </SocialMedia>
+      <SocialMedia
+        onClick={handleSocialClick}
+        name="Facebook"
+        link={`https://www.facebook.com/sharer/sharer.php?u=${link}`}
+      >
+        <FaFacebookF />
+      </SocialMedia>
+      <SocialMedia
+        onClick={handleSocialClick}
+        name="X"
+        link={`https://twitter.com/intent/tweet?url=${link}&text=¡Vi este post y me pareció interesante!`}
+      >
+        <FaXTwitter />
+      </SocialMedia>
+      <SocialMedia
+        onClick={handleSocialClick}
+        name="Linkedin"
+        link={`http://www.linkedin.com/shareArticle?mini=true&url=${link}&title=¡Vi este post y me pareció interesante!`}
+      >
+        <FaLinkedinIn />
+      </SocialMedia>
+    </div>
+  );
+};
+
+const SocialMedia = ({
+  className,
+  children,
+  name,
+  link,
+  onClick,
+}: {
+  className?: string;
+  children: ReactNode;
+  name?: string;
+  onClick?: () => void;
+  link?: string;
+}) => {
+  return (
+    <a rel="noreferrer" target="_blank" href={link}>
+      <button
+        onClick={onClick}
+        className={twMerge(
+          "group  w-6 hover:scale-125 transition-all h-6 text-lg text-black hover:text-brand flex items-center justify-center relative active:scale-95 cursor-pointer "
+        )}
+      >
+        {children}
+        <span
+          className={twMerge(
+            "absolute bg-dark dark:bg-[#1B1D22] -bottom-8 text-xs text-white px-2 py-1 rounded hidden group-hover:block"
+          )}
+        >
+          {name}
+        </span>
+      </button>
+    </a>
+  );
+};
 
 export const Suscription = () => {
   const handleClick = () => {
@@ -136,7 +199,7 @@ export const Suscription = () => {
         free! Only good stuff, no spam.
       </p>
 
-      <div className="mt-8">
+      <div className="mt-8 max-w-2xl mx-auto">
         <iframe
           frameBorder="0"
           id="formmy-iframe"
