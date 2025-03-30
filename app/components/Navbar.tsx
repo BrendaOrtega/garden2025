@@ -186,11 +186,11 @@ const Burger = ({
   const [scope, animate] = useAnimate();
   useEffect(() => {
     if (isOpen) {
-      animate("#top", { rotateZ: -135, y: 6, backgroundColor: "white" });
-      animate("#bottom", { rotateZ: 135, y: -5, backgroundColor: "white" });
+      animate("#top", { rotateZ: -135, y: 6, backgroundColor: "#9346ed" });
+      animate("#bottom", { rotateZ: 135, y: -5, backgroundColor: "#9346ed" });
     } else {
-      animate("#top", { rotateZ: 0, y: 0, backgroundColor: "black" });
-      animate("#bottom", { rotateZ: 0, y: 0, backgroundColor: "black" });
+      animate("#top", { rotateZ: 0, y: 0, backgroundColor: "#9346ed" });
+      animate("#bottom", { rotateZ: 0, y: 0, backgroundColor: "#9346ed" });
     }
   }, [isOpen]);
   return (
