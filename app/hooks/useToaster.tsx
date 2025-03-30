@@ -8,8 +8,8 @@ export const useToast = () => {
   const setInitial = (toast) => {
     toast.style.transition = "all .3s ease";
     toast.style.position = "fixed";
-    toast.style.top = "80px";
-    toast.style.right = "40px";
+    toast.style.bottom = "32px";
+    toast.style.right = "32px";
     toast.style.transform = "translateY(20px)";
     toast.style.opacity = 0;
   };
@@ -39,7 +39,7 @@ export const useToast = () => {
     const toast = document.createElement("section");
     setInitial(toast);
     toast.innerHTML = `
-    <div class="px-4 py-4 h-12 md:h-16 ${bgColor} ${textColor} rounded-full flex items-center justify-center " >
+    <div class="px-4 py-4 h-12 border border-black/10 md:h-16 ${bgColor} ${textColor} rounded-full flex items-center justify-center " >
     <div class="flex items-center gap-1"><span class="w-fit text-2xl flex items-center justify-center rounded-full">${icon}</span>
     <p class="text-lg ${textColor} "> ${text}</p></div>
     </div>
