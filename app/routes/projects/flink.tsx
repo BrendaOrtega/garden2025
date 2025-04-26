@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import { Navbar } from "~/components/Navbar";
 import { Tag } from "~/components/ScrollHorizontal";
+import { Footer } from "../home";
 
 export default function flink() {
   return (
@@ -17,9 +18,12 @@ export default function flink() {
         <div className="flex flex-wrap md:flex-nowrap gap-12 mt-16 md:mt-28 ">
           <div className="w-full md:w-[30%] relative">
             <Link to="/">
-              <p className="uppercase text-white/30 text-xs absolute -top-10">
-                <span className="hover:text-flink font-bold"> Projects </span> ⇢{" "}
-                <span className="text-black"> Flink</span>
+              <p className="uppercase text-dark text-xs absolute -top-10">
+                <span className="text-dark hover:text-flink font-bold">
+                  {" "}
+                  Projects{" "}
+                </span>{" "}
+                ⇢ <span className="text-dark"> Flink</span>
               </p>
             </Link>
             <a
@@ -140,8 +144,8 @@ export default function flink() {
             participants to understand pain points and areas of opportunity and
             define what actions to take.
           </p>
-          <div className="bg-[#0E0E10] px-[10%] mt-20">
-            <img className="" src="/projects/flink/img1.png" />
+          <div className=" px-[10%] mt-20">
+            <img className="" src="/projects/flink/img1.webp" />
           </div>
         </div>
         <hr className="h-[1px] border-[.5px] w-full border-black/30 border-dashed my-12 md:my-28"></hr>{" "}
@@ -199,7 +203,7 @@ export default function flink() {
             proposals to solve our challenges:
           </p>
           <div className="flex  justify-center">
-            <img className="w-[70%]" src="/projects/flink/img2.png" />
+            <img className="w-[70%]" src="/projects/flink/img2.webp" />
           </div>
           <p className="text-xl md:text-2xl text-black mt-6">
             After rank our proposals, our technical constraints and the user
@@ -207,8 +211,8 @@ export default function flink() {
             features:
           </p>
           <div className="flex justify-around mt-20 flex-wrap md:flex-nowrap">
-            <img className="w-[480px]" src="/projects/flink/img3.png" />
-            <img className="w-[480px]" src="/projects/flink/img4.png" />
+            <img className="w-[480px]" src="/projects/flink/img3.webp" />
+            <img className="w-[480px]" src="/projects/flink/img4.webp" />
           </div>
         </div>
         <hr className="h-[1px] border-[.5px] w-full border-black/30 border-dashed my-12 md:my-28"></hr>{" "}
@@ -222,8 +226,8 @@ export default function flink() {
           <div className="flex flex-wrap md:flex-nowrap gap-16 mt-20">
             <div className="w-full md:w-[380px] grow hover:-translate-y-4 transition-all">
               <img
-                className="rounded-2xl h-[200px] w-full object-cover"
-                src="/projects/flink/img5.png"
+                className="rounded-2xl h-[200px] w-full object-cover border border-dark/10"
+                src="/projects/flink/img5.webp"
               />
               <h3 className="text-black text-xl mt-6">A sketching session</h3>
               <p className="text-xl text-black mt-2">
@@ -236,7 +240,7 @@ export default function flink() {
             <div className="w-full md:w-[380px] grow hover:-translate-y-4 transition-all">
               <img
                 className="rounded-2xl h-[200px] object-cover w-full border border-white/10"
-                src="/projects/flink/img7.png"
+                src="/projects/flink/img7.webp"
               />
               <h3 className="text-black text-xl mt-6">
                 Prototyping and testing
@@ -251,7 +255,7 @@ export default function flink() {
             <div className="w-full md:w-[380px] grow hover:-translate-y-4 transition-all">
               <img
                 className="rounded-2xl h-[200px] object-cover w-full"
-                src="/projects/flink/img6.png"
+                src="/projects/flink/img6.webp"
               />
               <h3 className="text-black text-xl mt-6">
                 High fidelity Wireframes
@@ -304,6 +308,7 @@ export default function flink() {
           <img className="w-20 mt-10" src="/projects/flink/img9.png" />
         </div>
       </section>
+      <Footer />
     </main>
   );
 }

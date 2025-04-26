@@ -233,7 +233,7 @@ export const Tag = ({
   return (
     <div
       className={cn("text-sm", {
-        "border border-gray-500/20 px-1 rounded text-gray-500":
+        "border border-gray-500/10 px-1 rounded text-dark cursor-pointer":
           variant === "outline",
       })}
     >
