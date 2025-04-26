@@ -137,13 +137,13 @@ const books = [
 const docs = [
   {
     title: "Jakob’s Ten Usability Heuristics",
-    image: "https://i.imgur.com/uetu8B8.png",
+    image: "/assets/heuristics.webp",
     rank: 4.8,
     link: "https://firebasestorage.googleapis.com/v0/b/garden-66daa.appspot.com/o/NNg%20Jakobs%20Usability%20Heuristics.pdf?alt=media&token=4427e01f-2ee3-4d7e-8f74-d459b2ebd25e",
   },
   {
     title: "Design Systems Repository",
-    image: "https://i.imgur.com/dllmOBM.png",
+    image: "/assets/system.webp",
     description:
       "Apende a transimitir información de forma visual (técnicas de dibujo, estructiras, etc).",
     rank: 4.8,
@@ -151,7 +151,7 @@ const docs = [
   },
   {
     title: "The Basics of User Experience Design by IDEO",
-    image: "https://i.imgur.com/qMJcq8U.png",
+    image: "/assets/ideo.webp",
     description:
       "Apende a transimitir información de forma visual (técnicas de dibujo, estructiras, etc).",
     rank: 4.8,
@@ -159,7 +159,7 @@ const docs = [
   },
   {
     title: "The field guide to Human Centered Design",
-    image: "https://i.imgur.com/xGWtryB.png",
+    image: "/assets/guide.webp",
     description:
       "Apende a transimitir información de forma visual (técnicas de dibujo, estructiras, etc).",
     rank: 4.8,
@@ -256,7 +256,7 @@ export default function Resources() {
         <CourseCard
           title="Diseño de Interfaces"
           link="https://ui.fixtergeek.com/"
-          image="https://i.imgur.com/fhHswAo.png"
+          image="/assets/ui.webp"
         />
         <CourseCard
           title="Diseño de producto digital con Lean y UX"
@@ -266,7 +266,7 @@ export default function Resources() {
         <CourseCard
           title="Certificado profesional de Diseño de experiencia del usuario (UX) de Google"
           link="https://grow.google/intl/es-419_us/certificates/ux-design/#?modal_active=none"
-          image="https://i.imgur.com/hIOsTlw.png"
+          image="/assets/google.webp"
         />
       </div>{" "}
       <Footer />
