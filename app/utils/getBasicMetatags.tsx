@@ -1,4 +1,4 @@
-export type GetBasicMetaTagsPros = {
+export type GetBasicMetaTagsType = {
   title?: string;
   description?: string;
   image?: string;
@@ -7,10 +7,10 @@ export type GetBasicMetaTagsPros = {
 
 export default function getBasicMetaTags({
   title,
-  description = "Let's talk!", // description should be at least 100 chars
+  description = "Let's talk!", // description should be at least 70 chars
   image = "https://i.imgur.com/eDktKC9.png",
   twitterCard = "summary",
-}: GetBasicMetaTagsPros) {
+}: GetBasicMetaTagsType) {
   if (!title) {
     return [
       {
@@ -43,6 +43,14 @@ export default function getBasicMetaTags({
     {
       property: "og:url",
       content: "www.brendago.design",
+    },
+    {
+      name: "twitter:title",
+      content: title,
+    },
+    {
+      name: "twitter:description",
+      content: description,
     },
     {
       name: "twitter:card",
