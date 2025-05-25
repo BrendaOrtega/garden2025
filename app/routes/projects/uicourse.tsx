@@ -97,7 +97,7 @@ export default function uicourse() {
           src="/projects/ui/img7.png"
         />
       </section>
-      <Footer />
+      <Footer variant="small" />
     </main>
   );
 }

@@ -81,7 +81,7 @@ export default function potentiia() {
           </div>
         </div>
       </section>
-      <Footer />
+      <Footer variant="small" />
     </main>
   );
 }

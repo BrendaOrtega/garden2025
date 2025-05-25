@@ -20,7 +20,7 @@ export default function constructoken() {
           <img
             className="h-auto w-full md:w-[70%] mx-auto "
             src="/projects/constructoken/cover.webp"
-            alt="the cat"
+            alt="project cover"
           />
         </div>
         <div className="flex flex-wrap md:flex-nowrap gap-12 mt-16 md:mt-28 ">
@@ -285,7 +285,7 @@ export default function constructoken() {
           <img className="w-20 mt-10" src="/projects/constructoken/fur.webp" />
         </div>
       </section>
-      <Footer />
+      <Footer variant="small" />
     </main>
   );
 }

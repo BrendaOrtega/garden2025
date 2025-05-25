@@ -16,9 +16,9 @@ export default function easybits() {
     <main className="bg-white">
       <Navbar />
       <section className="max-w-7xl mx-auto  w-[90%] md:w-ful pt-4 md:pt-16  pb-20">
-        <div className="w-full bg-easybits h-[280px] md:h-[680px] overflow-hidden rounded-[40px]  bg-cover">
+        <div className="w-full bg-easybits flex items-center h-[280px] md:h-[680px] overflow-hidden rounded-[40px]  bg-cover">
           <img
-            className="h-auto w-full mt-14 md:mt-40 md:w-[80%] mx-auto "
+            className="h-auto w-full  md:w-[80%] mx-auto "
             src="/projects/easybits/cover.webp"
             alt="the cat"
           />
@@ -391,7 +391,7 @@ export default function easybits() {
           <img className="w-20 mt-10" src="/projects/easybits/img14.webp" />
         </div>
       </section>
-      <Footer />
+      <Footer variant="small" />
     </main>
   );
 }

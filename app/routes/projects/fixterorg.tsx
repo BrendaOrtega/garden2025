@@ -37,7 +37,7 @@ export default function fixterorg() {
               rel="noopener noreferrer"
             >
               <img
-                className="w-[160px] hover:scale-90 transition-all"
+                className="w-32 md:w-[160px] hover:scale-90 transition-all"
                 src="/projects/fixterorg/logo.png"
               />
             </a>
@@ -117,7 +117,7 @@ export default function fixterorg() {
           <img className="w-20 mt-6" src="/projects/fixterorg/fur.png" />
         </div>
       </section>
-      <Footer />
+      <Footer variant="small" />
     </main>
   );
 }

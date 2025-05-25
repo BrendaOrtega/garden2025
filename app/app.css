@@ -44,6 +44,10 @@
   --animate-scrolling: scrolling 70s linear infinite;
 }
 
+body::selection {
+  background: #f4edfd;
+}
+
 .font-logo {
   font-family: "Englebert", cursive;
 }

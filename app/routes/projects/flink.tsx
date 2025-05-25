@@ -326,7 +326,7 @@ export default function flink() {
           <img className="w-20 mt-10" src="/projects/flink/img9.webp" />
         </div>
       </section>
-      <Footer />
+      <Footer variant="small" />
     </main>
   );
 }

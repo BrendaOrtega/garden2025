@@ -18,7 +18,7 @@ export default function santander() {
       <section className="max-w-7xl mx-auto  w-[90%] md:w-ful pt-4 md:pt-16  pb-20">
         <div className="w-full bg-[#BD5648] h-[280px] md:h-[680px] overflow-hidden rounded-[40px]  bg-cover">
           <img
-            className="h-auto w-full md:w-[80%] mx-auto "
+            className="h-auto w-full md:w-[80%] md:mx-auto ml-3 "
             src="/projects/santander/cover.png"
             alt="the cat"
           />
@@ -132,7 +132,7 @@ export default function santander() {
           </div>
         </div>
       </section>
-      <Footer />
+      <Footer variant="small" />
     </main>
   );
 }

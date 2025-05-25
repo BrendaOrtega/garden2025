@@ -168,7 +168,7 @@ export default function azteca() {
           />
         </div>
       </section>
-      <Footer />
+      <Footer variant="small" />
     </main>
   );
 }

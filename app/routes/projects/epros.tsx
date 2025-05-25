@@ -38,7 +38,7 @@ export default function epros() {
             >
               <img
                 className="w-32 md:w-[140px] hover:scale-90 transition-all"
-                src="/projects/epros/logo.png"
+                src="/projects/epros/logo.webp"
               />
             </a>
             <div className="flex flex-wrap gap-4 mt-6">
@@ -162,7 +162,7 @@ export default function epros() {
           <div className="w-full lg:w-[60%]">
             <img
               className="w-full object-cover"
-              src="/projects/epros/img1.png"
+              src="/projects/epros/img1.webp"
             />
           </div>
         </div>
@@ -179,10 +179,13 @@ export default function epros() {
             experience across all digital touchpoints.
           </p>
           <div className="flex w-full overflow-hidden">
-            <img className="w-1/2 " src="/projects/epros/img2.png" />
-            <img className="w-1/2" src="/projects/epros/img3.png" />
+            <img className="w-1/2 " src="/projects/epros/img2.webp" />
+            <img className="w-1/2" src="/projects/epros/img3.webp" />
           </div>
-          <img className="w-full object-cover" src="/projects/epros/img4.png" />
+          <img
+            className="w-full object-cover"
+            src="/projects/epros/img4.webp"
+          />
         </div>
         <hr className="h-[1px] border-[.5px] w-full border-black/10 my-12 md:my-28" />{" "}
         <div>
@@ -199,9 +202,9 @@ export default function epros() {
             improvement.
           </p>
         </div>
-        <img className="w-20 mt-6" src="/projects/epros/fur.png" />
+        <img className="w-20 mt-6" src="/projects/epros/fur.webp" />
       </section>
-      <Footer />
+      <Footer variant="small" />
     </main>
   );
 }

@@ -16,9 +16,9 @@ export default function reformai() {
     <main className="bg-white">
       <Navbar />
       <section className="max-w-7xl mx-auto  w-[90%] md:w-ful pt-4 md:pt-16  pb-20">
-        <div className="w-full bg-reform h-[280px] md:h-[680px] overflow-hidden rounded-[40px]  bg-cover">
+        <div className="w-full flex items-center bg-reform h-[280px] md:h-[680px] overflow-hidden rounded-[40px]  bg-cover">
           <img
-            className="h-auto w-full md:w-[80%] mx-auto "
+            className="h-auto w-full md:w-[80%] mx-auto mt-6 md:mt-10 "
             src="/reform.webp"
             alt="the cat"
           />
@@ -188,7 +188,7 @@ export default function reformai() {
         </div>
         <img className="w-20 mt-6" src="/projects/reform/fur.webp" />
       </section>
-      <Footer />
+      <Footer variant="small" />
     </main>
   );
 }

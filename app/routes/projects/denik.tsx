@@ -105,7 +105,7 @@ export default function denik() {
           </div>
         </div>
       </section>
-      <Footer />
+      <Footer variant="small" />
     </main>
   );
 }

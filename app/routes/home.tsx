@@ -248,13 +248,18 @@ const GalleryImage = ({
   );
 };
 
-export const Footer = () => {
+export const Footer = ({ variant }: { variant?: string }) => {
   const handleClick = () => {
     const node = document.querySelector("#top");
     node.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <section className="min-h-screen bg-black flex items-center justify-center relative overflow-hidden md:overflow-auto ">
+    <section
+      className={cn(
+        "min-h-screen bg-black flex items-center justify-center relative overflow-hidden md:overflow-auto ",
+        { "min-h-[50vh] py-12": variant === "small" }
+      )}
+    >
       <div className="text-center text-2xl ">
         <p className="text-lg md:text-xl text-graylight mb-6 font-light">
           The best ideas start as conversations

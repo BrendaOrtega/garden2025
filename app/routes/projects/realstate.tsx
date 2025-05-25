@@ -192,7 +192,7 @@ export default function realstate() {
         </div>
         <img className="w-20 mt-6" src="/projects/reform/fur.png" /> */}
       </section>
-      <Footer />
+      <Footer variant="small" />
     </main>
   );
 }

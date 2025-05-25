@@ -314,7 +314,7 @@ export default function constructoken() {
           <img className="w-20 mt-10" src="/projects/covalto/fur.webp" />
         </div>
       </section>
-      <Footer />
+      <Footer variant="small" />
     </main>
   );
 }
