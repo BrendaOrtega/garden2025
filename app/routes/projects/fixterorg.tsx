@@ -18,9 +18,9 @@ export default function fixterorg() {
       <section className="max-w-7xl mx-auto  w-[90%] md:w-ful pt-4 md:pt-16  pb-20">
         <div className="w-full bg-fixter h-[280px] md:h-[680px] overflow-hidden rounded-[40px]  bg-cover">
           <img
+            alt="cover"
             className="h-auto w-full md:w-[80%] mx-auto scale-75 "
             src="/projects/org.webp"
-            alt="the cat"
           />
         </div>
         <div className="flex gap-12 mt-16 md:mt-28 flex-wrap md:flex-nowrap ">
@@ -37,6 +37,7 @@ export default function fixterorg() {
               rel="noopener noreferrer"
             >
               <img
+                alt="logo"
                 className="w-32 md:w-[160px] hover:scale-90 transition-all"
                 src="/projects/fixterorg/logo.png"
               />
@@ -99,8 +100,8 @@ export default function fixterorg() {
             update included changes in the interface elements and UI patterns.
           </p>
           <div className="mt-10">
-            <img src="/projects/fixterorg/img1.png" />
-            <img src="/projects/fixterorg/img2.png" />
+            <img alt="website " src="/projects/fixterorg/img1.png" />
+            <img alt="website" src="/projects/fixterorg/img2.png" />
           </div>
         </div>
         <hr className="h-[1px] border-[.5px] w-full border-black/10 my-12 md:my-28" />{" "}
@@ -114,7 +115,11 @@ export default function fixterorg() {
             session time) to identify points in need of improvement and improve
             the usability and efficiency of the website.
           </p>
-          <img className="w-20 mt-6" src="/projects/fixterorg/fur.png" />
+          <img
+            alt="fur"
+            className="w-20 mt-6"
+            src="/projects/fixterorg/fur.png"
+          />
         </div>
       </section>
       <Footer variant="small" />

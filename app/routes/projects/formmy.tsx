@@ -19,7 +19,7 @@ export default function formmy() {
           <img
             className="h-auto w-full md:w-[80%] mx-auto "
             src="/projects/formmy/cover.png"
-            alt="the cat"
+            alt="cover"
           />
         </div>
         <div className="flex gap-12 mt-16 md:mt-28 flex-wrap md:flex-nowrap ">
@@ -38,6 +38,7 @@ export default function formmy() {
               <img
                 className="w-[200px] md:w-[240px] hover:scale-90 transition-all"
                 src="/projects/formmy/logo.svg"
+                alt="logo"
               />
             </a>
             <div className="flex flex-wrap gap-4 mt-6">

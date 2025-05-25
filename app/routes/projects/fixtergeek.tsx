@@ -18,9 +18,9 @@ export default function fixtergeek() {
       <section className="max-w-7xl mx-auto  w-[90%] md:w-ful pt-16  pb-20">
         <div className="w-full h-[280px] md:h-[680px] overflow-hidden rounded-[40px] bg-gradient-to-r from-[#5265F6] to-[#835EF6]">
           <img
+            alt="cover"
             className="h-auto w-full md:w-[80%] mx-auto "
             src="/projects/fixtergeek/cover.png"
-            alt="the cat"
           />
         </div>
         <div className="flex gap-12 mt-16 md:mt-28 flex-wrap md:flex-nowrap ">
@@ -37,6 +37,7 @@ export default function fixtergeek() {
               rel="noopener noreferrer"
             >
               <img
+                alt="logo"
                 className="w-[220px] hover:scale-90 transition-all"
                 src="/projects/fixtergeek/logo.png"
               />
@@ -107,6 +108,7 @@ export default function fixtergeek() {
               }
             >
               <img
+                alt="cover"
                 src={`/projects/fixtergeek/img1.png`}
                 alt="hero"
                 className="mx-auto h-auto rounded-2xl  w-full object-left-top"

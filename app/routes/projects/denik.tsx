@@ -20,7 +20,7 @@ export default function denik() {
           <img
             className="h-auto w-full md:w-[80%] mx-auto  "
             src="/projects/denik/cover.webp"
-            alt="the cat"
+            alt="cover"
           />
         </div>
         <div className="flex gap-12 mt-16 md:mt-28 flex-wrap md:flex-nowrap ">
@@ -39,6 +39,7 @@ export default function denik() {
               <img
                 className="w-[140px] md:w-[160px] hover:scale-90 transition-all"
                 src="/projects/denik/logo.png"
+                alt="logo"
               />
             </a>
             <div className="flex flex-wrap gap-4 mt-6">

@@ -20,7 +20,7 @@ export default function potentiia() {
           <img
             className="h-auto w-full md:w-[80%]  mx-auto scale-75 "
             src="/projects/potentiia/cover.webp"
-            alt="the cat"
+            alt="cover"
           />
         </div>
         <div className="flex gap-12 mt-16 md:mt-28 flex-wrap md:flex-nowrap ">
@@ -39,6 +39,7 @@ export default function potentiia() {
               <img
                 className="w-44 md:w-[200px] hover:scale-90 transition-all"
                 src="/projects/potentiia/logo.webp"
+                alt="logo"
               />
             </a>
             <div className="flex flex-wrap gap-4 mt-6">

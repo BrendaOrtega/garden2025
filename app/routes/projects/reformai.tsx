@@ -18,9 +18,9 @@ export default function reformai() {
       <section className="max-w-7xl mx-auto  w-[90%] md:w-ful pt-4 md:pt-16  pb-20">
         <div className="w-full flex items-center bg-reform h-[280px] md:h-[680px] overflow-hidden rounded-[40px]  bg-cover">
           <img
+            alt="cover"
             className="h-auto w-full md:w-[80%] mx-auto mt-6 md:mt-10 "
             src="/reform.webp"
-            alt="the cat"
           />
         </div>
         <div className="flex gap-12 mt-16 md:mt-28 flex-wrap md:flex-nowrap ">
@@ -37,6 +37,7 @@ export default function reformai() {
               rel="noopener noreferrer"
             >
               <img
+                alt="logo"
                 className="w-44 md:w-[220px] hover:scale-90 transition-all"
                 src="/projects/reform/logo.webp"
               />
@@ -139,6 +140,7 @@ export default function reformai() {
           </div>
           <div className="w-full lg:w-[60%]">
             <img
+              alt="diragram "
               className="w-full object-cover"
               src="/projects/reform/img6.webp"
             />
@@ -155,13 +157,19 @@ export default function reformai() {
           </p>
           <p className="text-xl  mt-6 mb-12"></p>
 
-          <img className="w-full " src="/projects/reform/img1.webp" />
-          <p className="text-xl  mt-6">Somo of the main screens</p>
           <img
+            alt="style guide"
+            className="w-full "
+            src="/projects/reform/img1.webp"
+          />
+          <p className="text-xl  mt-6">Some of the main screens</p>
+          <img
+            alt="screens"
             className="w-full object-cover"
             src="/projects/reform/img3.webp"
           />
           <img
+            alt="screens"
             className="w-full object-cover"
             src="/projects/reform/img4.webp"
           />
@@ -170,6 +178,7 @@ export default function reformai() {
             prototype that follows the happy paths:
           </p>
           <img
+            alt="prototype"
             className="w-full object-cover mt-12"
             src="/projects/reform/img5.webp"
           />
@@ -186,7 +195,7 @@ export default function reformai() {
             the web version.
           </p>
         </div>
-        <img className="w-20 mt-6" src="/projects/reform/fur.webp" />
+        <img alt="fur" className="w-20 mt-6" src="/projects/reform/fur.webp" />
       </section>
       <Footer variant="small" />
     </main>

@@ -18,9 +18,9 @@ export default function epros() {
       <section className="max-w-7xl mx-auto  w-[90%] md:w-ful pt-4 md:pt-16  pb-20">
         <div className="w-full flex items-center bg-pros h-[280px] md:h-[680px] overflow-hidden rounded-[40px]  bg-cover">
           <img
+            alt="cover"
             className="h-auto w-full md:w-[80%] mx-auto scale-75"
             src="/pros.webp"
-            alt="the cat"
           />
         </div>
         <div className="flex gap-12 mt-16 md:mt-28 flex-wrap md:flex-nowrap ">
@@ -37,6 +37,7 @@ export default function epros() {
               rel="noopener noreferrer"
             >
               <img
+                alt="logo"
                 className="w-32 md:w-[140px] hover:scale-90 transition-all"
                 src="/projects/epros/logo.webp"
               />
@@ -161,6 +162,7 @@ export default function epros() {
           </div>
           <div className="w-full lg:w-[60%]">
             <img
+              alt="goal diagram"
               className="w-full object-cover"
               src="/projects/epros/img1.webp"
             />
@@ -179,10 +181,19 @@ export default function epros() {
             experience across all digital touchpoints.
           </p>
           <div className="flex w-full overflow-hidden">
-            <img className="w-1/2 " src="/projects/epros/img2.webp" />
-            <img className="w-1/2" src="/projects/epros/img3.webp" />
+            <img
+              alt="style guide"
+              className="w-1/2 "
+              src="/projects/epros/img2.webp"
+            />
+            <img
+              alt="style guide"
+              className="w-1/2"
+              src="/projects/epros/img3.webp"
+            />
           </div>
           <img
+            alt="screens"
             className="w-full object-cover"
             src="/projects/epros/img4.webp"
           />
@@ -202,7 +213,7 @@ export default function epros() {
             improvement.
           </p>
         </div>
-        <img className="w-20 mt-6" src="/projects/epros/fur.webp" />
+        <img alt="fur" className="w-20 mt-6" src="/projects/epros/fur.webp" />
       </section>
       <Footer variant="small" />
     </main>

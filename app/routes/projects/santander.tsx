@@ -20,7 +20,7 @@ export default function santander() {
           <img
             className="h-auto w-full md:w-[80%] md:mx-auto ml-3 "
             src="/projects/santander/cover.png"
-            alt="the cat"
+            alt="cover"
           />
         </div>
 
@@ -38,6 +38,7 @@ export default function santander() {
               rel="noopener noreferrer"
             >
               <img
+                alt="logo"
                 className="w-[140px] md:w-[180px] hover:scale-90 transition-all"
                 src="/projects/santander/logo.png"
               />

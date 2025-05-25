@@ -42,6 +42,7 @@ export default function constructoken() {
               <img
                 className="w-52 md:w-[240px] hover:scale-90 grayscale-25 transition-all"
                 src="/projects/constructoken/constru_logo.webp"
+                alt="logo constructoken"
               />
             </a>
 
@@ -106,6 +107,7 @@ export default function constructoken() {
               <img
                 className="rounded-2xl h-[280px]"
                 src="/projects/constructoken/img04.webp"
+                alt="benchmark"
               />
               <p className="text-xl dark:text-iron-300 mt-6">
                 {" "}
@@ -118,6 +120,7 @@ export default function constructoken() {
               <img
                 className="rounded-2xl h-[280px] object-cover"
                 src="/projects/constructoken/img05.webp"
+                alt="interviews"
               />
               <p className="text-xl dark:text-iron-300 mt-6">
                 {" "}
@@ -132,6 +135,7 @@ export default function constructoken() {
               <img
                 className="rounded-2xl h-[280px] object-cover"
                 src="/projects/constructoken/img06.webp"
+                alt="sketch"
               />
               <p className="text-xl dark:text-iron-300 mt-6">
                 {" "}
@@ -158,6 +162,7 @@ export default function constructoken() {
               <img
                 className="rounded-xl rotate-3 hover:-rotate-3 transition-all"
                 src="/projects/constructoken/img07.webp"
+                alt="user"
               />
               <p className="text-base dark:text-iron-300 mt-8">
                 {" "}
@@ -169,6 +174,7 @@ export default function constructoken() {
               <img
                 className="rounded-xl -rotate-3 hover:rotate-3 transition-all"
                 src="/projects/constructoken/img08.webp"
+                alt="user"
               />
               <p className="text-base dark:text-iron-300 mt-8">
                 {" "}
@@ -195,6 +201,7 @@ export default function constructoken() {
                 <img
                   className="rounded-2xl h-[240px] object-cover border border-black/10"
                   src="/projects/constructoken/img10.jpg"
+                  alt="moscow example"
                 />
                 <h3 className="text-black font-semibold font-title text-xl mt-6">
                   MoSCoW method
@@ -211,6 +218,7 @@ export default function constructoken() {
                 <img
                   className="rounded-2xl h-[240px] object-cover"
                   src="/projects/constructoken/img13.jpg"
+                  alt="sitemap"
                 />
                 <h3 className="text-black font-semibold font-title text-xl mt-6">
                   Site map
@@ -225,6 +233,7 @@ export default function constructoken() {
                 <img
                   className="rounded-2xl h-[240px] object-cover"
                   src="/projects/constructoken/img14.webp"
+                  alt="userflow"
                 />
                 <h3 className="text-black font-semibold font-title text-xl mt-6">
                   Sketching & User flow{" "}
@@ -253,19 +262,21 @@ export default function constructoken() {
           <div className=" flex flex-col gap-20 mt-20 ">
             <div>
               <h4 className="font-semibold text-2xl mb-6">Style guide</h4>
-              <img src="/projects/constructoken/img15.webp" />
+              <img src="/projects/constructoken/img15.webp" alt="styly guide" />
             </div>
             <div>
               <h4 className="font-semibold text-2xl">Website</h4>
               <img
                 className="w-full mx-auto "
                 src="/projects/constructoken/img16.webp"
+                alt="website"
               />
             </div>
             <div>
               <h4 className="font-semibold text-2xl ">Mobile app</h4>
               <img
                 className="w-full mx-auto"
+                alt="mobile app"
                 src="/projects/constructoken/img09.webp"
               />
             </div>
@@ -282,7 +293,11 @@ export default function constructoken() {
             a beta test with 10 users to continue collecting feedback and
             iterating the design.
           </p>
-          <img className="w-20 mt-10" src="/projects/constructoken/fur.webp" />
+          <img
+            className="w-20 mt-10"
+            src="/projects/constructoken/fur.webp"
+            alt="fur"
+          />
         </div>
       </section>
       <Footer variant="small" />

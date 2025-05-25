@@ -18,9 +18,9 @@ export default function lastplay() {
       <section className="max-w-7xl mx-auto  w-[90%] md:w-ful pt-4 md:pt-16  pb-20">
         <div className="w-full flex items-center bg-[#262F5F] h-[280px] md:h-[680px] overflow-hidden rounded-[40px]  bg-cover">
           <img
+            alt="cover"
             className="h-auto w-full md:w-[80%] mx-auto mt-10 md:mt-20 "
             src="/projects/lastplay/cover.webp"
-            alt="the cat"
           />
         </div>
         <div className="flex gap-12 mt-16 md:mt-28 flex-wrap md:flex-nowrap ">
@@ -37,6 +37,7 @@ export default function lastplay() {
               rel="noopener noreferrer"
             >
               <img
+                alt="logo"
                 className="w-20  md:w-[100px] hover:scale-90 transition-all"
                 src="/projects/lastplay/logo.webp"
               />
@@ -105,6 +106,7 @@ export default function lastplay() {
           <div className="flex flex-wrap md:flex-nowrap gap-16 mt-12 md:mt-20">
             <div className="w-full md:w-[380px] grow">
               <img
+                alt="site map"
                 className="rounded-xl rotate-3 hover:-rotate-3 h-[240px] md:h-[380px] w-full object-cover transition-all"
                 src="/projects/lastplay/img3.webp"
               />
@@ -115,6 +117,7 @@ export default function lastplay() {
             </div>
             <div className="w-full md:w-[380px] grow">
               <img
+                alt="low fidelity wireframes"
                 className="rounded-xl -rotate-3 hover:rotate-3 transition-all h-[240px] md:h-[380px] w-full object-cover"
                 src="/projects/lastplay/img4.webp"
               />
@@ -143,12 +146,13 @@ export default function lastplay() {
             and a large change related to interface elements and UI patterns.
           </p>
           <div className="flex flex-col justify-center items-center mt-10">
-            <img src="/projects/lastplay/img1.webp" />
+            <img alt="screens" src="/projects/lastplay/img1.webp" />
             <img
+              alt="paint"
               className="w-12 md:w-[120px]"
               src="/projects/lastplay/color.webp"
             />
-            <img src="/projects/lastplay/img2.webp" />
+            <img alt="screens" src="/projects/lastplay/img2.webp" />
           </div>
         </div>
         <hr className="h-[1px] border-[.5px] w-full border-black/10 my-12 md:my-28" />{" "}
@@ -164,7 +168,11 @@ export default function lastplay() {
             same time, work will be started on the admin panel that will be
             managed by internal staff.
           </p>
-          <img className="w-20 mt-6" src="/projects/lastplay/fur.webp" />
+          <img
+            alt="fur"
+            className="w-20 mt-6"
+            src="/projects/lastplay/fur.webp"
+          />
         </div>
       </section>
       <Footer variant="small" />

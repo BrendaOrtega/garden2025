@@ -20,7 +20,7 @@ export default function constructoken() {
           <img
             className="h-auto w-full md:w-[80%] mx-auto "
             src="/projects/covalto/cover2.webp"
-            alt="the cat"
+            alt="cover"
           />
         </div>
         <div className="flex flex-wrap md:flex-nowrap gap-12 mt-16 md:mt-28 ">
@@ -41,6 +41,7 @@ export default function constructoken() {
               rel="noopener noreferrer"
             >
               <img
+                alt="logo"
                 className="w-20 md:w-[120px] hover:scale-90 transition-all"
                 src="/projects/covalto/logo.webp"
               />
@@ -99,6 +100,7 @@ export default function constructoken() {
           <div className="flex flex-wrap md:flex-nowrap gap-16 mt-10 md:mt-16">
             <div className="w-full md:w-[380px] grow hover:-translate-y-4 transition-all">
               <img
+                alt="benchmark"
                 className="rounded-2xl h-[280px] w-full object-cover"
                 src="/projects/covalto/img6.webp"
               />
@@ -113,6 +115,7 @@ export default function constructoken() {
             </div>
             <div className="w-full md:w-[380px] grow hover:-translate-y-4 transition-all">
               <img
+                alt="interviews"
                 className="rounded-2xl h-[280px] object-cover w-full"
                 src="/projects/covalto/img8.webp"
               />
@@ -140,6 +143,7 @@ export default function constructoken() {
           <div className="flex flex-wrap md:flex-nowrap gap-16 mt-10 md:mt-20">
             <div className="w-full md:w-[380px] grow transition-all">
               <img
+                alt="user persona"
                 className="rounded-2xl  w-full object-cover rotate-3 hover:-rotate-3 transition-all"
                 src="/projects/covalto/user1.webp"
               />
@@ -151,6 +155,7 @@ export default function constructoken() {
             </div>
             <div className="w-full md:w-[380px] grow transition-all">
               <img
+                alt="user persona"
                 className="rounded-2xl  object-cover w-full -rotate-3 hover:rotate-3 transition-all"
                 src="/projects/covalto/user2.webp"
               />
@@ -170,6 +175,7 @@ export default function constructoken() {
           </p>
           <div className="flex mt-16 gap-10">
             <img
+              alt="user journey"
               className="rounded-2xl  object-cover "
               src="/projects/covalto/img2.webp"
             />
@@ -212,10 +218,12 @@ export default function constructoken() {
           </ul>
           <div className="flex justify-around mt-20 flex-wrap md:flex-nowrap">
             <img
+              alt="user comment"
               className="h-auto w-full md:w-auto md:h-36 object-cover"
               src="/projects/covalto/comment1.webp"
             />
             <img
+              alt="user comment"
               className="h-auto w-full md:w-auto md:h-36 object-cover"
               src="/projects/covalto/comment2.webp"
             />
@@ -233,6 +241,7 @@ export default function constructoken() {
             using business cards.*
           </p>
           <img
+            alt="moscow"
             className="rounded-2xl  object-cover mt-10 "
             src="/projects/covalto/img9.webp"
           />
@@ -249,6 +258,7 @@ export default function constructoken() {
           <div className="flex flex-wrap md:flex-nowrap gap-16 mt-12">
             <div className="w-full md:w-[380px] grow hover:-translate-y-4 transition-all">
               <img
+                alt="site map"
                 className="rounded-2xl h-[200px] w-full object-cover"
                 src="/projects/covalto/img3.webp"
               />
@@ -261,6 +271,7 @@ export default function constructoken() {
 
             <div className="w-full md:w-[380px] grow hover:-translate-y-4 transition-all">
               <img
+                alt="wireframes"
                 className="rounded-2xl h-[200px] object-cover w-full"
                 src="/projects/covalto/img4.webp"
               />
@@ -275,6 +286,7 @@ export default function constructoken() {
             </div>
             <div className="w-full md:w-[380px] grow hover:-translate-y-4 transition-all">
               <img
+                alt="blueprint"
                 className="rounded-2xl h-[200px] object-cover w-full"
                 src="/projects/covalto/img5.webp"
               />
@@ -297,6 +309,7 @@ export default function constructoken() {
             and Android.
           </p>
           <img
+            alt="wireframes"
             className=" object-cover w-full"
             src="/projects/covalto/img7.webp"
           />
@@ -311,7 +324,11 @@ export default function constructoken() {
             (experientially and functionally) with real users was scheduled for
             February 2022. Iterations continued after this testing cycle.
           </p>
-          <img className="w-20 mt-10" src="/projects/covalto/fur.webp" />
+          <img
+            alt="fur"
+            className="w-20 mt-10"
+            src="/projects/covalto/fur.webp"
+          />
         </div>
       </section>
       <Footer variant="small" />

@@ -20,7 +20,7 @@ export default function uicourse() {
           <img
             className="h-auto w-full md:w-[80%] mx-auto "
             src="/projects/ui/cover.gif"
-            alt="the cat"
+            alt="cover"
           />
         </div>
         <div className="flex gap-12 mt-16 md:mt-28 flex-wrap md:flex-nowrap ">
@@ -39,6 +39,7 @@ export default function uicourse() {
               <img
                 className="w-48 md:w-[220px] hover:scale-90 transition-all"
                 src="/projects/ui/Logo.png"
+                alt="logo"
               />
             </a>
             <div className="flex flex-wrap gap-4 mt-6">
@@ -93,6 +94,7 @@ export default function uicourse() {
         </div>
 
         <img
+          alt="screens"
           className="rounded-[40px] border border-white/10 mt-16 md:mt-28  "
           src="/projects/ui/img7.png"
         />

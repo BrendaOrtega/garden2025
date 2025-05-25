@@ -18,9 +18,9 @@ export default function flink() {
       <section className="max-w-7xl mx-auto  w-[90%] md:w-ful  pt-4 md:pt-16  pb-20">
         <div className="w-full bg-[url('/projects/flink/back.png')] h-[280px] md:h-[680px] overflow-hidden rounded-[40px]  bg-cover">
           <img
+            alt="cover"
             className=" w-full object-cover  h-full mx-auto "
             src="/projects/flink/img12.webp"
-            alt="the cat"
           />
         </div>
         <div className="flex flex-wrap md:flex-nowrap gap-12 mt-16 md:mt-28 ">
@@ -40,6 +40,7 @@ export default function flink() {
               rel="noopener noreferrer"
             >
               <img
+                alt="logo"
                 className="w-[120px] md:w-[140px] hover:scale-90 transition-all"
                 src="/projects/flink/Flink.png"
               />
@@ -110,6 +111,7 @@ export default function flink() {
           <div className="flex flex-wrap md:flex-nowrap gap-16 mt-20">
             <div className="w-full md:w-[380px] grow">
               <img
+                alt="user persona"
                 className="rounded-xl rotate-3 hover:-rotate-3 transition-all"
                 src="/projects/flink/user1.webp"
               />
@@ -121,6 +123,7 @@ export default function flink() {
             </div>
             <div className="w-full md:w-[380px] grow">
               <img
+                alt="user persona"
                 className="rounded-xl -rotate-3 hover:rotate-3 transition-all"
                 src="/projects/flink/user2.webp"
               />
@@ -152,7 +155,7 @@ export default function flink() {
             define what actions to take.
           </p>
           <div className=" px-[10%] mt-20">
-            <img className="" src="/projects/flink/img1.webp" />
+            <img alt="testing" className="" src="/projects/flink/img1.webp" />
           </div>
         </div>
         <hr className="h-[1px] border-[.5px] w-full border-black/10 my-12 md:my-28" />
@@ -195,10 +198,12 @@ export default function flink() {
           </ul>
           <div className="flex justify-around mt-20 flex-wrap md:flex-nowrap">
             <img
+              alt="user comment"
               className="h-auto w-full md:w-auto md:h-36 object-cover"
               src="/projects/flink/comment1.webp"
             />
             <img
+              alt="user comment"
               className="h-auto w-full md:w-auto md:h-36 object-cover"
               src="/projects/flink/comment2.webp"
             />
@@ -220,6 +225,7 @@ export default function flink() {
           </p>
           <div className="flex  justify-center">
             <img
+              alt="challenges diagram"
               className="w-full md:w-[80%] mt-16 rounded-2xl"
               src="/projects/flink/img11.webp"
             />
@@ -234,6 +240,7 @@ export default function flink() {
           <div className="flex flex-wrap md:flex-nowrap gap-16 mt-12">
             <div className="w-full md:w-[380px] grow hover:-translate-y-4 transition-all">
               <img
+                alt="sketching"
                 className="rounded-2xl h-[200px] w-full object-cover border border-dark/10"
                 src="/projects/flink/img5.webp"
               />
@@ -249,6 +256,7 @@ export default function flink() {
 
             <div className="w-full md:w-[380px] grow hover:-translate-y-4 transition-all">
               <img
+                alt="prototype"
                 className="rounded-2xl h-[200px] object-cover w-full border border-white/10"
                 src="/projects/flink/img7.webp"
               />
@@ -264,6 +272,7 @@ export default function flink() {
             </div>
             <div className="w-full md:w-[380px] grow hover:-translate-y-4 transition-all">
               <img
+                alt="wireframes"
                 className="rounded-2xl h-[200px] object-cover w-full"
                 src="/projects/flink/img6.webp"
               />
@@ -293,6 +302,7 @@ export default function flink() {
           </p>
           <div className="flex justify-center mt-20">
             <img
+              alt="screens"
               className="w-full md:w-[80%]"
               src="/projects/flink/img8.webp"
             />
@@ -306,6 +316,7 @@ export default function flink() {
           </p>
           <div className="flex justify-center mt-20">
             <img
+              alt="screens"
               className="w-full md:w-[80%]"
               src="/projects/flink/img10.webp"
             />
@@ -323,7 +334,11 @@ export default function flink() {
             recommend" section and its usefulness in their investment
             decision-making.
           </p>
-          <img className="w-20 mt-10" src="/projects/flink/img9.webp" />
+          <img
+            alt="fur"
+            className="w-20 mt-10"
+            src="/projects/flink/img9.webp"
+          />
         </div>
       </section>
       <Footer variant="small" />

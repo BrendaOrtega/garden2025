@@ -18,9 +18,9 @@ export default function easybits() {
       <section className="max-w-7xl mx-auto  w-[90%] md:w-ful pt-4 md:pt-16  pb-20">
         <div className="w-full bg-easybits flex items-center h-[280px] md:h-[680px] overflow-hidden rounded-[40px]  bg-cover">
           <img
+            alt="cover"
             className="h-auto w-full  md:w-[80%] mx-auto "
             src="/projects/easybits/cover.webp"
-            alt="the cat"
           />
         </div>
         <div className="flex flex-wrap md:flex-nowrap gap-12 mt-16 md:mt-28 ">
@@ -40,6 +40,7 @@ export default function easybits() {
               rel="noopener noreferrer"
             >
               <img
+                alt="logo"
                 className="w-[160px] hover:scale-90 transition-all"
                 src="/projects/easybits/logo-easybits.webp"
               />
@@ -121,7 +122,11 @@ export default function easybits() {
             to analyze and compare existing platforms in the market.
           </p>
           <div className="px-0 md:px-[10%] mt-10 md:mt-20">
-            <img className="" src="/projects/easybits/img1.webp" />
+            <img
+              alt="benchmark"
+              className=""
+              src="/projects/easybits/img1.webp"
+            />
           </div>
         </div>
         <hr className="h-[1px] border-[.5px] w-full border-black/10 my-12 md:my-28" />
@@ -139,6 +144,7 @@ export default function easybits() {
           <div className="flex flex-wrap md:flex-nowrap gap-16 mt-20">
             <div className="w-full md:w-[380px] grow">
               <img
+                alt="user persona"
                 className="rounded-xl rotate-3 hover:-rotate-3 transition-all"
                 src="/projects/easybits/user1.webp"
               />
@@ -149,6 +155,7 @@ export default function easybits() {
             </div>
             <div className="w-full md:w-[380px] grow">
               <img
+                alt="user persona"
                 className="rounded-xl -rotate-3 hover:rotate-3 transition-all"
                 src="/projects/easybits/user2.webp"
               />
@@ -159,6 +166,7 @@ export default function easybits() {
             </div>
             <div className="w-full md:w-[380px] grow">
               <img
+                alt="user persona"
                 className="rounded-xl rotate-3 hover:-rotate-3 transition-all"
                 src="/projects/easybits/user3.webp"
               />
@@ -222,10 +230,12 @@ export default function easybits() {
           </ul>
           <div className="flex items-center justify-around mt-20 gap-y-6 md:gap-y-0 flex-wrap md:flex-nowrap">
             <img
+              alt="user comment"
               className="h-auto w-full md:w-auto md:h-36 object-cover"
               src="/projects/easybits/img2.webp"
             />
             <img
+              alt="user comment"
               className="h-auto w-full md:w-auto md:h-36 object-cover"
               src="/projects/easybits/img3.webp"
             />
@@ -251,6 +261,7 @@ export default function easybits() {
             of features needed to offer a true end-to-end experience:
           </p>
           <img
+            alt="moscow"
             className="w.full md:w-[80%] mx-auto mt-10"
             src="/projects/easybits/img4.webp"
           />
@@ -268,6 +279,7 @@ export default function easybits() {
           <div className="flex flex-wrap md:flex-nowrap gap-16 mt-12">
             <div className="w-full md:w-[380px] grow hover:-translate-y-4 transition-all">
               <img
+                alt="site map"
                 className="rounded-2xl h-[200px] md:h-[340px] object-cover object-top w-full border border-white/10"
                 src="/projects/easybits/img16.webp"
               />
@@ -282,6 +294,7 @@ export default function easybits() {
             </div>
             <div className="w-full md:w-[380px] grow hover:-translate-y-4 transition-all">
               <img
+                alt="user flow"
                 className="rounded-2xl h-[200px] md:h-[340px] w-full object-cover border border-dark/10"
                 src="/projects/easybits/img5.webp"
               />
@@ -312,18 +325,21 @@ export default function easybits() {
           <div className="flex flex-wrap md:flex-nowrap gap-16 my-20">
             <div className="w-full md:w-[380px] grow">
               <img
+                alt="neobrutalism"
                 className="rounded-xl rotate-3 hover:-rotate-3 transition-all"
                 src="/projects/easybits/img6.webp"
               />
             </div>
             <div className="w-full md:w-[380px] grow">
               <img
+                alt="neobrutalism"
                 className="rounded-xl -rotate-3 hover:rotate-3 transition-all"
                 src="/projects/easybits/img7.webp"
               />
             </div>
             <div className="w-full md:w-[380px] grow">
               <img
+                alt="neobrutalism"
                 className="rounded-xl rotate-3 hover:-rotate-3 transition-all"
                 src="/projects/easybits/img8.webp"
               />
@@ -338,14 +354,17 @@ export default function easybits() {
             proposal:
           </p>
           <img
+            alt="figma"
             className="col-span-1 rounded-xl  transition-all mb-12 "
             src="/projects/easybits/img17.webp"
           />
           <img
+            alt="screens"
             className="col-span-1 rounded-xl  transition-all "
             src="/projects/easybits/img13.webp"
           />
           <img
+            alt="mails"
             className=" rounded-xl  transition-all mt-12"
             src="/projects/easybits/img15.webp"
           />
@@ -356,21 +375,25 @@ export default function easybits() {
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-16 my-10 md:my-20">
             <img
+              alt="social media post"
               className="col-span-1 rounded-xl rotate-3 hover:-rotate-3 transition-all"
               src="/projects/easybits/img9.webp"
             />
 
             <img
+              alt="social media post"
               className="col-span-1 rounded-xl -rotate-3 hover:rotate-3 transition-all"
               src="/projects/easybits/img10.webp"
             />
 
             <img
+              alt="social media post"
               className="col-span-1 rounded-xl rotate-3 hover:-rotate-3 transition-all"
               src="/projects/easybits/img11.webp"
             />
 
             <img
+              alt="social media post"
               className="col-span-1 rounded-xl -rotate-3 hover:rotate-3 transition-all"
               src="/projects/easybits/img12.webp"
             />
@@ -388,7 +411,11 @@ export default function easybits() {
             improvement in the next iteration cycle. The launch is scheduled for
             July 2025.
           </p>
-          <img className="w-20 mt-10" src="/projects/easybits/img14.webp" />
+          <img
+            alt="fur"
+            className="w-20 mt-10"
+            src="/projects/easybits/img14.webp"
+          />
         </div>
       </section>
       <Footer variant="small" />

@@ -20,12 +20,12 @@ export default function realstate() {
           <img
             className="h-auto w-full md:w-[80%] mx-auto  -mt-20 scale-75"
             src="/projects/inmuebles.webp"
-            alt="the cat"
+            alt="cover"
           />
         </div>
         <div className="min-h-54 flex justify-center items-center">
           <div>
-            <img className="w-20 mx-auto" src="/NotFound.gif" />
+            <img alt="logo" className="w-20 mx-auto" src="/NotFound.gif" />
             <h3>
               I'm working on this project, please come back later to see the
               final result.

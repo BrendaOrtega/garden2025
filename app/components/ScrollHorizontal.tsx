@@ -218,7 +218,10 @@ export const MotionContainer = ({
                   {description}
                 </p>
               </div>
-              <motion.div id="button" className="opacity-0 ">
+              <div className="block md:hidden">
+                <SimpleButton theme={theme} link={link} />
+              </div>
+              <motion.div id="button" className="opacity-0 hidden md:block">
                 <SimpleButton theme={theme} link={link} />
               </motion.div>
             </AnimatePresence>
@@ -240,7 +243,7 @@ export const SimpleButton = ({
     <Link to={link}>
       <button
         className={cn(
-          "w-fit px-4 bg-dark/10 flex items-center gap-2 text-black rounded-full mt-6 h-10 hover:bg-black hover:text-white transition-all cursor-pointer",
+          "w-fit px-4 bg-dark/10 flex items-center gap-2 text-black rounded-full mt-3 md:mt-6 h-10 hover:bg-black hover:text-white transition-all cursor-pointer",
           {
             "bg-white/10 text-white hover:bg-white hover:text-black":
               theme === "dark",
