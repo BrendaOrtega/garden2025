@@ -155,7 +155,7 @@ export const MotionContainer = ({
       // transition={{ delay: 0.2 }}
       // initial={{ filter: "blur(9px)", opacity: 0 }}
       viewport={{ once: true }}
-      className={twMerge(" pt-0 ")}
+      className={twMerge(" pt-0 pointer-events-none md:pointer-events-auto")}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -172,7 +172,7 @@ export const MotionContainer = ({
       >
         <img
           src={img}
-          className={cn("absolute transition-all", imageClassName)}
+          className={cn("absolute transition-all ", imageClassName)}
           alt="cat"
         />
         {variant === "invite" ? (

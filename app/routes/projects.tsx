@@ -55,7 +55,7 @@ export default function Blog() {
               tags={["Product Design", "App", "Fintech"]}
               title="Flink"
               description="Democratizing access to stock market investments in Mexico"
-              imageClassName="top-0 -left-10 md:-left-14 group-hover:scale-110 "
+              imageClassName="-top-12 md:top-0 -left-10 md:-left-14 scale-90 group-hover:scale-110 "
             />
           </div>
           <MotionContainer
@@ -66,7 +66,7 @@ export default function Blog() {
             tags={["Product Design", "Frontend", "Webapp", "Saas"]}
             title="Deník"
             description="The agenda to manage appointments, payments and reminders for entrepreneurs and small businesses"
-            imageClassName="top-10 md:top-20 scale-80 group-hover:scale-90 group-hover:translate-y-10"
+            imageClassName="top-0 md:top-20 scale-75 group-hover:scale-90 group-hover:translate-y-10"
           />
           <div className="mt-0 lg:mt-16">
             <MotionContainer
@@ -96,7 +96,7 @@ export default function Blog() {
               tags={["UI Design", "Prototyping", "App", "AI"]}
               title="Reform AI"
               description="Renovate your spaces using artificial intelligence and buy the furniture and services that you need in one place"
-              imageClassName="-right-0 top-14 md:top-32 scale-120 group-hover:scale-110"
+              imageClassName="-right-0 top-6 md:top-32 scale-90 md:scale-120 group-hover:scale-110"
             />
           </div>
           <MotionContainer
@@ -116,7 +116,7 @@ export default function Blog() {
               img="/ui-fx.webp"
               tags={["Design", "Webapp", "Frontend", "E-learning"]}
               title="UI Course"
-              imageClassName="-right-0 top-10 md:top-20 group-hover:-translate-x-16"
+              imageClassName="-right-0 top-0 md:top-20 group-hover:-translate-x-16"
               description="A complete course to learn UI Design from the principles to practice"
             />
           </div>
@@ -126,7 +126,7 @@ export default function Blog() {
             img="/play.webp"
             tags={["UI Design", "App", "Sports"]}
             title="LastPlay"
-            imageClassName="-right-16 top-10 md:top-20 group-hover:-translate-x-14 scale-120"
+            imageClassName="-right-16 top-0 md:top-20  group-hover:-translate-x-14 scale-100 md:scale-120"
             description="The management application to organize and manage sports tournaments"
           />
           <div className="mt-0 lg:mt-16">
@@ -147,7 +147,7 @@ export default function Blog() {
             tags={["Product Design", "Prototyping", "Webapp"]}
             title="Propiedades"
             description="Facilitating the process of buying and selling real estate properties for clients and sellers"
-            imageClassName="left-0 right-0 -top-16 scale-60 md:scale-75 transition-all rounded-xl"
+            imageClassName="left-0 right-0 -top-28 md:-top-16 scale-60 md:scale-75 transition-all rounded-xl"
           />
           <div className="mt-0 lg:mt-16">
             <MotionContainer
