@@ -16,10 +16,10 @@ import { db } from "~/.server/db";
 import type { Route } from "./+types/blogpost";
 import Markdown from "~/components/MarkDown";
 import { CircularButton } from "~/components/CircularButton";
-import getBasicMetaTags from "~/utils/getBasicMetatags";
 import { useToast } from "~/hooks/useToaster";
 import { twMerge } from "tailwind-merge";
 import { PiLinkSimpleBold } from "react-icons/pi";
+import getBasicMetaTags from "~/utils/getBasicMetaTags";
 
 export const meta = ({ data }: Route.MetaArgs) => {
   const { post } = data;
@@ -190,7 +190,11 @@ export const Suscription = () => {
   };
   return (
     <section className="bg-black  py-32 text-center relative px-4 md:px-[5%] xl:px-0 overflow-hidden md:overflow-auto ">
-      <img className="-top-10 right-72 absolute w-24" src="/loader3.gif" />
+      <img
+        className="-top-10 right-72 absolute w-24"
+        src="/loader3.gif"
+        alt="cat loader"
+      />
       <h3 className="text-4xl font-title md:text-6xl text-white font-bold ">
         Enjoying these posts?
       </h3>

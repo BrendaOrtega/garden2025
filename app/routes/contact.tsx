@@ -15,7 +15,11 @@ export default function Saas() {
         <Navbar />
       </div>
       <Form />
-      <img className="w-14 absolute -bottom-3 right-28" src="/Cat2.gif" />
+      <img
+        className="w-14 absolute -bottom-3 right-28"
+        src="/Cat2.gif"
+        alt="cat"
+      />
     </section>
   );
 }

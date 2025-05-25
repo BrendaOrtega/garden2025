@@ -20,10 +20,10 @@ import { useRef, useState, type ReactNode, type RefObject } from "react";
 import { MotionValue } from "motion";
 import { FlipWords } from "~/components/FlipWords";
 import { cn } from "~/utils/cn";
-import getBasicMetaTags from "~/utils/getBasicMetatags";
 import { Link } from "react-router";
 import { CircularButton } from "~/components/CircularButton";
 import MichiWhite from "~/components/MichiWhite";
+import getBasicMetaTags from "~/utils/getBasicMetaTags";
 
 export const meta = () =>
   getBasicMetaTags({
@@ -46,6 +46,7 @@ const MiniCard = ({
         <img
           className="w-full h-[105px] rounded object-cover object-center"
           src={img}
+          alt="project exmple"
         />
       </motion.div>
       <span className="font-bold font-title ">{number}</span>{" "}
@@ -140,7 +141,11 @@ const Gallery = () => {
     <main className="bg-black h-[200px] lg:h-[400px] pt-10 lg:pt-40 relative -top-28 z-50">
       <h2 className="text-white text-center justify-center text-2xl lg:text-4xl  pl-10 md:pl-0 font-title flex items-center">
         Play with my pictures{" "}
-        <img className="w-32 lg:w-44 -ml-8" src="/loader4.gif" />
+        <img
+          className="w-32 lg:w-44 -ml-8"
+          src="/loader4.gif"
+          alt="cat laoder"
+        />
       </h2>
 
       <section
@@ -226,11 +231,19 @@ const GalleryImage = ({
     >
       <img
         className="object-cover pointer-events-none  w-full h-[70%] lg:h-[75%]"
-        alt=""
+        alt="line"
         src={img}
       />
-      <img className="w-8 absolute right-0 bottom-4" src="/line.svg" />
-      <img className="w-6 absolute left-0 bottom-6" src="/line.svg" />
+      <img
+        className="w-8 absolute right-0 bottom-4"
+        src="/line.svg"
+        alt="line"
+      />
+      <img
+        className="w-6 absolute left-0 bottom-6"
+        src="/line.svg"
+        alt="line"
+      />
     </motion.div>
   );
 };
@@ -323,7 +336,6 @@ const About = ({ text, texttwo }: { text: string; texttwo: string }) => {
       ref={target}
       className="min-h-[130vh] lg:min-h-[150vh] bg-white flex flex-col items-start justify-center relative"
     >
-      {/* <img className="absolute -bottom-14 right-80 w-56" src="/Cat.gif" /> */}
       <div className="max-w-7xl mx-auto px-4 md:px-[5%] xl:px-0">
         <img className="w-16 lg:w-24 mb-6" src="/yarn2.webp" alt="estambre" />
         <div className="text-2xl lg:text-5xl leading-snug text-black text-center flex flex-wrap gap-x-2">

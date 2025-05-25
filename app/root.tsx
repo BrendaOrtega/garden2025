@@ -1,5 +1,6 @@
 import {
   isRouteErrorResponse,
+  Link,
   Links,
   Meta,
   Outlet,
@@ -11,6 +12,7 @@ import type { Route } from "./+types/root";
 import "./app.css";
 import useHotjar from "./utils/useHotjar";
 import useGoogleTM from "./utils/useGoogleTM";
+import { Button } from "./components/Button";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -66,14 +68,32 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   }
 
   return (
-    <main className="pt-16 p-4 container mx-auto">
-      <h1>{message}</h1>
+    <main className=" bg-white text-center h-svh flex justify-center items-center">
+      {/* <h1>{message}</h1>
       <p>{details}</p>
       {stack && (
         <pre className="w-full p-4 overflow-x-auto">
           <code>{stack}</code>
         </pre>
-      )}
+      )} */}
+      <div>
+        <img className="scale-90" src="/NotFound.gif" alt="Not found" />
+        <h2 className="font-title font-semibold text-2xl">
+          ¡Ups! Page not found
+        </h2>{" "}
+        <p className="text-xl mt-3">
+          Return to the main page or explore the content I have for you.
+        </p>
+        <div className="flex gap-6 justify-center mt-12">
+          <Link to="/">
+            {" "}
+            <Button variant="black" label="Back to home" />
+          </Link>
+          <Link to="/blog">
+            <Button label="Visit the blog" />
+          </Link>
+        </div>
+      </div>
     </main>
   );
 }

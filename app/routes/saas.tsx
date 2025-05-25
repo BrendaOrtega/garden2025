@@ -1,9 +1,9 @@
 import { Navbar } from "~/components/Navbar";
 import { Footer } from "./home";
 import { ScrollGallery } from "~/components/ScrollGallery";
-import getBasicMetaTags from "~/utils/getBasicMetatags";
 import { cn } from "~/utils/cn";
 import { useEffect } from "react";
+import getBasicMetaTags from "~/utils/getBasicMetaTags";
 
 export const meta = () =>
   getBasicMetaTags({
@@ -65,7 +65,11 @@ export default function Saas() {
           <h2 className="text-4xl lg:text-7xl font-title text-center  ">
             Take a look at my own
           </h2>{" "}
-          <img className="w-32 lg:w-52 -mt-3 h-fit" src="/cartel.webp" />
+          <img
+            className="w-32 lg:w-52 -mt-3 h-fit"
+            src="/cartel.webp"
+            alt="projects cartel"
+          />
         </div>
         <ScrollGallery />
         <section className="flex flex-col gap-12 mt-12 lg:hidden">
@@ -94,6 +98,7 @@ const SaasCard = ({
       <img
         className=" w-full object-cover border border-black/10 h-72 rounded-2xl"
         src={project.image}
+        alt="project screen"
       />
       <h3 className="text-3xl mt-6 text-black font-title">{project.title}</h3>
       <p className={cn(" transition-all mt-2 text-lg text-black", {})}>

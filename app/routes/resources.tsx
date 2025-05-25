@@ -1,8 +1,8 @@
 import { Navbar } from "~/components/Navbar";
 import { Footer } from "./home";
 import { InfiniteMovingCards } from "~/components/InfiniteMoving";
-import getBasicMetaTags from "~/utils/getBasicMetatags";
 import { useEffect } from "react";
+import getBasicMetaTags from "~/utils/getBasicMetaTags";
 
 export const meta = () =>
   getBasicMetaTags({
@@ -227,7 +227,11 @@ export default function Resources() {
           <h2 className="text-4xl lg:text-7xl font-title text-center  ">
             Discover an interesting
           </h2>
-          <img className="w-16 lg:w-32 mt-0 lg:-mt-8 " src="/cartel2.webp" />
+          <img
+            className="w-16 lg:w-32 mt-0 lg:-mt-8 "
+            src="/cartel2.webp"
+            alt="resouces cartel"
+          />
         </div>
       </div>
       <div>
@@ -290,6 +294,7 @@ const CourseCard = ({
           <img
             className="absolute -top-14 z-0  transition-all group-hover:-top-[80px] -left-20 scale-[40%]  "
             src="/loader3.gif"
+            alt="cat loader"
           />
           <img
             className="rounded-2xl object-cover w-full h-40 relative z-10"

@@ -76,6 +76,7 @@ export const InfiniteMovingCards = ({
                       }
                     )}
                     src="/loader2.gif"
+                    alt="loader"
                   />
                   <img
                     className={cn(
@@ -86,6 +87,7 @@ export const InfiniteMovingCards = ({
                       }
                     )}
                     src={item.image}
+                    alt="loader"
                   />
                 </div>
                 <h3 className="text-lg font-title text-center mt-3">
@@ -110,10 +112,12 @@ export const InfiniteMovingCards = ({
                   <img
                     className="absolute hidden group-hover:block -top-20 -right-20 "
                     src="/loader.gif"
+                    alt="loader"
                   />
                   <img
                     className="rounded-2xl border object-left border-black/10 w-[180px] lg:w-[220px] mx-auto h-[220px] lg:h-[260px] object-cover"
                     src={item.image}
+                    alt="item"
                   />
                   <div
                     className={cn(

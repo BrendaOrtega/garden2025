@@ -1,48 +1,38 @@
-export type GetBasicMetaTagsType = {
+export type GetBasicMetaTagsTypes = {
   title?: string;
   description?: string;
   image?: string;
-  twitterCard?: "summary" | "summary_large_image";
+  twitterCard?: "summary" | "summary_large_card";
 };
 
 export default function getBasicMetaTags({
-  title,
-  description = "Let's talk!", // description should be at least 70 chars
-  image = "https://i.imgur.com/eDktKC9.png",
+  title = "Brenda González Ortega | Product Designer",
+  description = "Let's talk!",
+  image = "https://easybits-dev.fly.storage.tigris.dev/6814ed40681c31b087c02c3a/metaImage_LaWXMUl4t8i6bG51UuG0s.webp",
   twitterCard = "summary",
-}: GetBasicMetaTagsType) {
-  if (!title) {
-    return [
-      {
-        title: "Brenda González Ortega | Product Designer",
-      },
-      {
-        name: "description",
-        content: "Let's talk!",
-      },
-    ];
-  }
+}: GetBasicMetaTagsTypes) {
   return [
     { title },
+    { name: "description", content: description },
     {
       property: "og:title",
       content: title,
     },
     {
-      name: "description",
+      property: "og:description",
       content: description,
     },
     {
-      property: "og:image",
-      content: image,
+      property: "og:url",
+      content: "www.brendago.design",
     },
     {
       property: "og:type",
       content: "website",
     },
     {
-      property: "og:url",
-      content: "www.brendago.design",
+      property: "og:image",
+      content: image,
     },
     {
       name: "twitter:title",
@@ -53,12 +43,16 @@ export default function getBasicMetaTags({
       content: description,
     },
     {
-      name: "twitter:card",
-      content: twitterCard,
-    },
-    {
       name: "twitter:image",
       content: image,
+    },
+    {
+      name: "twitter:url",
+      content: "www.brendago.design",
+    },
+    {
+      name: "twitter:card",
+      content: twitterCard,
     },
   ];
 }

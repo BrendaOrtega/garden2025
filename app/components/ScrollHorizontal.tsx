@@ -1,5 +1,7 @@
 import {
+  AnimatePresence,
   motion,
+  useAnimate,
   useMotionValueEvent,
   useScroll,
   useTransform,
@@ -34,7 +36,7 @@ export const ScrollHorizontal = () => {
             </div>
             <div className=" flex gap-12 lg:gap-20">
               <MotionContainer
-                link="/easybits"
+                link="/projects/easybits"
                 id="uno"
                 className="bg-[#B097E3]"
                 img="/easybits.webp"
@@ -44,7 +46,7 @@ export const ScrollHorizontal = () => {
                 imageClassName="top-20 md:top-40 -right-28 group-hover:-right-20 transition-all "
               />
               <MotionContainer
-                link="/flink"
+                link="/projects/flink"
                 id="dos"
                 img="/flink.webp"
                 // className="bg-[#B097E3]"
@@ -56,7 +58,7 @@ export const ScrollHorizontal = () => {
               />
 
               <MotionContainer
-                link="/denik"
+                link="/projects/denik"
                 img="/denik.webp"
                 className="bg-[#FFD25C]"
                 id="tres"
@@ -66,7 +68,7 @@ export const ScrollHorizontal = () => {
                 imageClassName="top-16 md:top-20 scale-80 group-hover:scale-90 group-hover:translate-y-10"
               />
               <MotionContainer
-                link="/token"
+                link="/projects/constructoken"
                 img="/token.webp"
                 className="bg-[#45C893]"
                 tags={["UX Design", "Fintech"]}
@@ -75,7 +77,7 @@ export const ScrollHorizontal = () => {
                 imageClassName="-left-8 top-0 scale-110 group-hover:scale-120"
               />
               <MotionContainer
-                link="/covalto"
+                link="/projects/covalto"
                 img="/covalto.svg"
                 tags={["Product Design", "Fintech"]}
                 title="Covalto"
@@ -83,7 +85,7 @@ export const ScrollHorizontal = () => {
                 imageClassName="w-[60%] top-32 md:top-54 left-[20%] right-0 bottom-0 group-hover:scale-80 "
               />
               <MotionContainer
-                link="/personal"
+                link="/projects/santander"
                 img="/personal.webp"
                 className="bg-[#F2B590]"
                 tags={["UX/UI Design", "App", "Webapp", "Banking"]}
@@ -128,6 +130,24 @@ export const MotionContainer = ({
   variant?: string;
   theme?: string;
 }) => {
+  const [scope, animate] = useAnimate();
+  const handleMouseEnter = () => {
+    animate("#button", {
+      opacity: 1,
+      transform: "translateY(-44px)",
+      scale: 1,
+    });
+    animate("#content", { transform: "translateY(-40px)" });
+  };
+
+  const handleMouseLeave = () => {
+    animate("#button", {
+      opacity: 0,
+      transform: "translateY(0px)",
+      scale: 0.5,
+    });
+    animate("#content", { transform: "translateY(0px)" });
+  };
   return (
     <motion.div
       layoutId={id}
@@ -136,6 +156,8 @@ export const MotionContainer = ({
       // initial={{ filter: "blur(9px)", opacity: 0 }}
       viewport={{ once: true }}
       className={twMerge(" pt-0 ")}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <div
         className={cn(
@@ -151,6 +173,7 @@ export const MotionContainer = ({
         <img
           src={img}
           className={cn("absolute transition-all", imageClassName)}
+          alt="cat"
         />
         {variant === "invite" ? (
           <Link to={link}>
@@ -158,39 +181,47 @@ export const MotionContainer = ({
               <p className="text-4xl font-title text-center flex justify-center gap-4">
                 View all projects <FaArrowTrendUp />
               </p>
-              <img className="-mb-80" src="/victory.webp" />
+              <img className="-mb-80" src="/victory.webp" alt="cat hand" />
             </div>
           </Link>
         ) : (
-          <div className={cn(" px-6 md:px-8 pb-10 md:pb-20")}>
-            <h2
-              className={cn("text-3xl font-bold text-dark", {
-                "text-white": theme === "dark",
-              })}
-            >
-              {title}
-            </h2>
-            <div
-              className={cn("flex gap-3 mt-4 text-dark/70 font-light", {
-                "text-graylight/80 ": theme === "dark",
-              })}
-            >
-              {tags.map((tag, index) => (
-                <Tag key={index} label={tag} />
-              ))}{" "}
-            </div>
-            <p
-              className={cn(
-                "text-dark  mt-4 text-lg md:text-xl font-subtitle",
-                {
-                  "text-graylight ": theme === "dark",
-                }
-              )}
-            >
-              {description}
-            </p>
-
-            {/* <SimpleButton theme={theme} link={link} /> */}
+          <div
+            className={cn(" px-6 md:px-8 pb-10 md:pb-20 translate-y-[50px]")}
+            ref={scope}
+          >
+            <AnimatePresence>
+              <div id="content">
+                <h2
+                  className={cn("text-3xl font-bold text-dark", {
+                    "text-white": theme === "dark",
+                  })}
+                >
+                  {title}
+                </h2>
+                <div
+                  className={cn("flex gap-3 mt-4 text-dark/70 font-light", {
+                    "text-graylight/80 ": theme === "dark",
+                  })}
+                >
+                  {tags.map((tag, index) => (
+                    <Tag key={index} label={tag} />
+                  ))}{" "}
+                </div>
+                <p
+                  className={cn(
+                    "text-dark  mt-4 text-lg md:text-xl font-subtitle",
+                    {
+                      "text-graylight ": theme === "dark",
+                    }
+                  )}
+                >
+                  {description}
+                </p>
+              </div>
+              <motion.div id="button" className="opacity-0 ">
+                <SimpleButton theme={theme} link={link} />
+              </motion.div>
+            </AnimatePresence>
           </div>
         )}
       </div>
@@ -233,7 +264,7 @@ export const Tag = ({
   return (
     <div
       className={cn("text-sm", {
-        "border border-gray-500/10 px-1 rounded text-dark cursor-pointer":
+        "border border-graylight/15 px-1 rounded text-graylight cursor-pointer":
           variant === "outline",
       })}
     >

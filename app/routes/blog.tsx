@@ -5,12 +5,12 @@ import { AiFillInstagram } from "react-icons/ai";
 import { FaGithub, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
 import { Footer } from "./home";
 import { ScrollGallery } from "~/components/ScrollGallery";
-import getBasicMetaTags from "~/utils/getBasicMetatags";
 import { db } from "~/.server/db";
 import type { Route } from "./+types/blog";
 import type { Post } from "@prisma/client";
 import { Link } from "react-router";
 import { useEffect } from "react";
+import getBasicMetaTags from "~/utils/getBasicMetaTags";
 
 export const meta = () =>
   getBasicMetaTags({
@@ -45,6 +45,7 @@ export default function Blog({ loaderData }: Route.ComponentProps) {
           <img
             className="w-20 lg:w-32 -mt-3 lg:-mt-6 h-16 md:h-fit"
             src="/cartel1.webp"
+            alt="blog cartel"
           />
           <h2 className="text-4xl lg:text-7xl font-title text-center  ">
             tips
@@ -68,6 +69,7 @@ const BlogCard = ({ post }: { post: Post }) => {
         <img
           className="absolute top-0 left-0 w-full h-full object-cover rounded-3xl group-hover:scale-110 transition-all"
           src={post.metaImage}
+          alt="meta image"
         />
         <div className="bg-[url(/surface.png)] w-full h-full flex items-end pl-2 pb-4 -ml-[1px] mt-[1px] bg-no-repeat z-20 ">
           <div>

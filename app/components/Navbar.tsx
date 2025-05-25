@@ -170,7 +170,11 @@ export const Navbar = () => {
             <Button className="mt-14" />
           </Link>
         </div>
-        <img className="absolute right-0 w-20 bottom-0" src="/yarn.svg" />
+        <img
+          className="absolute right-0 w-20 bottom-0"
+          src="/yarn.svg"
+          alt="purple yarn "
+        />
       </motion.div>
     </section>
   );

@@ -2,8 +2,8 @@ import type { Route } from "./+types/home";
 import { Navbar } from "~/components/Navbar";
 import { Footer } from "./home";
 import { MotionContainer } from "~/components/ScrollHorizontal";
-import getBasicMetaTags from "~/utils/getBasicMetatags";
 import { useEffect } from "react";
+import getBasicMetaTags from "~/utils/getBasicMetaTags";
 
 export const meta = () =>
   getBasicMetaTags({
@@ -30,6 +30,7 @@ export default function Blog() {
           <img
             className="w-32 lg:w-44 mt-0 md:-mt-6 h-fit"
             src="/cartel3.webp"
+            alt="saas cartel"
           />
         </div>
         <div className="flex justify-between gap-12 lg:gap-20 flex-wrap mt-12 lg:mt-32 ">
@@ -37,7 +38,7 @@ export default function Blog() {
           <MotionContainer
             className="bg-[#B097E3] w-full md:w-[inherit] h-[580px] lg:h-[842px]"
             id="uno"
-            link="/easybits"
+            link="/projects/easybits"
             img="/easybits.webp"
             tags={["Product Design", "Webapp", "Frontend", "Saas"]}
             title="EasyBits"
@@ -46,7 +47,7 @@ export default function Blog() {
           />
           <div className="mt-0 lg:mt-16">
             <MotionContainer
-              link="/flink"
+              link="/projects/flink"
               id="dos"
               img="/flink.webp"
               // className="bg-[#B097E3]"
@@ -58,7 +59,7 @@ export default function Blog() {
             />
           </div>
           <MotionContainer
-            link="/denik"
+            link="/projects/denik"
             img="/denik.webp"
             className="bg-[#FFD25C] w-full md:w-[inherit] h-[580px] lg:h-[842px]"
             id="tres"
@@ -69,7 +70,7 @@ export default function Blog() {
           />
           <div className="mt-0 lg:mt-16">
             <MotionContainer
-              link="/token"
+              link="/projects/constructoken"
               img="/token.webp"
               className="bg-[#45C893] w-full md:w-[inherit] h-[580px] lg:h-[842px]"
               tags={["UX Design", "App", "Fintech"]}
@@ -80,7 +81,7 @@ export default function Blog() {
           </div>
           <MotionContainer
             className="w-full md:w-[inherit] h-[580px] lg:h-[842px]"
-            link="/covalto"
+            link="/projects/covalto"
             img="/covalto.svg"
             tags={["Product Design", "App", "Fintech"]}
             title="Covalto"
@@ -89,7 +90,7 @@ export default function Blog() {
           />
           <div className="mt-0 lg:mt-16">
             <MotionContainer
-              link="/reform"
+              link="/projects/reform"
               img="/reform.webp"
               className="bg-[#B097E3] w-full md:w-[inherit] h-[580px] lg:h-[842px]"
               tags={["UI Design", "Prototyping", "App", "AI"]}
@@ -99,7 +100,7 @@ export default function Blog() {
             />
           </div>
           <MotionContainer
-            link="/personal"
+            link="/projects/santander"
             img="/personal.webp"
             className="bg-[#F2B590] w-full md:w-[inherit] h-[580px] lg:h-[842px]"
             tags={["Product Design", "App", "Webapp", "Banking"]}
@@ -111,7 +112,7 @@ export default function Blog() {
             <MotionContainer
               theme="dark"
               className="bg-[#0E0E10] w-full md:w-[inherit] h-[580px] lg:h-[842px]"
-              link="/ui"
+              link="/projects/uicourse"
               img="/ui-fx.webp"
               tags={["Design", "Webapp", "Frontend", "E-learning"]}
               title="UI Course"
@@ -121,7 +122,7 @@ export default function Blog() {
           </div>
           <MotionContainer
             className="bg-[#F1ABA5] w-full md:w-[inherit] h-[580px] lg:h-[842px]"
-            link="/lastplay"
+            link="/projects/lastplay"
             img="/play.webp"
             tags={["UI Design", "App", "Sports"]}
             title="LastPlay"
@@ -130,7 +131,7 @@ export default function Blog() {
           />
           <div className="mt-0 lg:mt-16">
             <MotionContainer
-              link="/e4pros"
+              link="/projects/epros"
               img="/pros.webp"
               className="bg-[#A3BC73] w-full md:w-[inherit] h-[580px] lg:h-[842px]"
               tags={["UX Design", "Website", "UI Design", "E-learning"]}
@@ -141,7 +142,7 @@ export default function Blog() {
           </div>
           <MotionContainer
             className="bg-[#E9786E] w-full md:w-[inherit] h-[580px] lg:h-[842px]"
-            link="/propiedades"
+            link="/projects/realstate"
             img="/projects/inmuebles.webp"
             tags={["Product Design", "Prototyping", "Webapp"]}
             title="Propiedades"
@@ -150,7 +151,7 @@ export default function Blog() {
           />
           <div className="mt-0 lg:mt-16">
             <MotionContainer
-              link="/fixter"
+              link="/projects/fixterorg"
               img="/projects/org.webp"
               className="bg-[#85DDCB] w-full md:w-[inherit] h-[580px] lg:h-[842px]"
               tags={["Product Design", "Frontend", "Website", "Services"]}
@@ -162,7 +163,7 @@ export default function Blog() {
           <MotionContainer
             className="bg-[#F85387] w-full md:w-[inherit] h-[580px] lg:h-[842px]"
             img="/projects/potentiia.png"
-            link="/potentia"
+            link="/projects/potentiia"
             tags={["UX/UI Design", "Website", "Frontend"]}
             title="Potentiia"
             description="Helping people to get their goals through sport and business coaching programs "
@@ -170,7 +171,7 @@ export default function Blog() {
           />
           <div className="mt-0 lg:mt-16">
             <MotionContainer
-              link="/azteca"
+              link="/projects/azteca"
               img="/projects/azteca.webp"
               className="bg-[#93E6EB] w-full md:w-[inherit] h-[580px] lg:h-[842px]"
               tags={["UX/UI Design", "E-commerce", "Health"]}

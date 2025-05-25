@@ -25,6 +25,22 @@
   --color-brand: #9346ed;
   --color-graylight: #747474;
   --color-flink: #118178;
+  --color-easybits: #9870ed;
+  --color-token: #6cc597;
+  --color-token-secondary: #547a66;
+  --color-fixter: #85ddcb;
+  --color-fixter-secondary: #37ab93;
+  --color-water: #6e85bb;
+  --color-salmon: #bd5648;
+  --color-denik: #ffd25c;
+  --color-denik-secondary: #5158f6;
+  --color-covalto: #8b5c02;
+  --color-reform: #b097e3;
+  --color-reform-secondary: #7b699f;
+  --color-pros: #8bb236;
+  --color-potentiia: #f85387;
+  --color-azteca: #2655a2;
+  --color-state: #e9786e;
   --animate-scrolling: scrolling 70s linear infinite;
 }
 
@@ -34,7 +50,8 @@
 body {
   background-color: black;
 }
-p {
+p,
+li {
   font-family: "Roobert Light";
 }
 .font-title {

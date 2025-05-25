@@ -34,7 +34,8 @@ export const Button = ({
       <button
         className={cn(
           "bg-[#9346ed] text-white text-lg  hover:translate-x-1 hover:translate-y-1 transition-all cursor-pointer rounded-full px-4 h-12",
-          { "bg-white text-black": variant === "white" }
+          { "bg-white text-black": variant === "white" },
+          { "bg-black text-white": variant === "black" }
         )}
       >
         <p>{label ? label : "Let's talk!"}</p>
