@@ -16,7 +16,7 @@ export default function flink() {
     <main className="bg-white">
       <Navbar />
       <section className="max-w-7xl mx-auto  w-[90%] md:w-ful  pt-4 md:pt-16  pb-20">
-        <div className="w-full bg-[url('/projects/flink/back.png')] h-[280px] md:h-[680px] overflow-hidden rounded-[40px]  bg-cover">
+        <div className="w-full bg-[url('/projects/flink/back.png')] h-[280px] md:h-[420px] lg:h-[680px] overflow-hidden rounded-[40px]  bg-cover">
           <img
             alt="cover"
             className=" w-full object-cover  h-full mx-auto "
@@ -196,7 +196,7 @@ export default function flink() {
               want financial education
             </li>
           </ul>
-          <div className="flex justify-around mt-20 flex-wrap md:flex-nowrap">
+          <div className="flex justify-around mt-20 flex-wrap lg:flex-nowrap">
             <img
               alt="user comment"
               className="h-auto w-full md:w-auto md:h-36 object-cover"
@@ -226,7 +226,7 @@ export default function flink() {
           <div className="flex  justify-center">
             <img
               alt="challenges diagram"
-              className="w-full md:w-[80%] mt-16 rounded-2xl"
+              className="w-full lg:w-[80%] mt-16 rounded-2xl"
               src="/projects/flink/img11.webp"
             />
           </div>
@@ -237,7 +237,7 @@ export default function flink() {
             Ideation & Prototyping
           </h2>
 
-          <div className="flex flex-wrap md:flex-nowrap gap-16 mt-12">
+          <div className="flex flex-wrap lg:flex-nowrap gap-16 mt-12">
             <div className="w-full md:w-[380px] grow hover:-translate-y-4 transition-all">
               <img
                 alt="sketching"

@@ -16,7 +16,7 @@ export default function constructoken() {
     <main className="bg-white">
       <Navbar />
       <section className="max-w-7xl mx-auto  w-[90%] md:w-ful pt-4 md:pt-16  pb-20">
-        <div className="w-full h-[280px] md:h-[680px] overflow-hidden rounded-[40px] bg-token">
+        <div className="w-full h-[280px] md:h-[420px] lg:h-[680px] overflow-hidden rounded-[40px] bg-token">
           <img
             className="h-auto w-full md:w-[70%] mx-auto "
             src="/projects/constructoken/cover.webp"
@@ -46,7 +46,7 @@ export default function constructoken() {
               />
             </a>
 
-            <div className="flex gap-4 mt-6">
+            <div className="flex flex-wrap gap-4 mt-6">
               <Tag variant="outline" label="Mobile App" />
               <Tag variant="outline" label="UI Design" />
               <Tag variant="outline" label="Fintech" />
@@ -102,7 +102,7 @@ export default function constructoken() {
             housing process, I carried out three different research tasks to
             collect as much information as possible. These were:
           </p>
-          <div className="flex flex-wrap md:flex-nowrap gap-16 mt-20">
+          <div className="flex flex-wrap lg:flex-nowrap gap-16 mt-20">
             <div className="w-full md:w-[380px] grow  hover:-translate-y-4 transition-all">
               <img
                 className="rounded-2xl h-[280px]"
@@ -196,11 +196,11 @@ export default function constructoken() {
             on to the definition & ideating stage. These were done in three
             parts:
             <p />
-            <div className="flex flex-wrap md:flex-nowrap gap-16 mt-20">
+            <div className="flex flex-wrap lg:flex-nowrap gap-16 mt-20">
               <div className="w-full md:w-[380px] grow  hover:-translate-y-4 transition-all">
                 <img
                   className="rounded-2xl h-[240px] object-cover border border-black/10"
-                  src="/projects/constructoken/img10.jpg"
+                  src="/projects/constructoken/img10.webp"
                   alt="moscow example"
                 />
                 <h3 className="text-black font-semibold font-title text-xl mt-6">
@@ -217,7 +217,7 @@ export default function constructoken() {
               <div className="w-full md:w-[380px] grow  hover:-translate-y-4 transition-all">
                 <img
                   className="rounded-2xl h-[240px] object-cover"
-                  src="/projects/constructoken/img13.jpg"
+                  src="/projects/constructoken/img13.webp"
                   alt="sitemap"
                 />
                 <h3 className="text-black font-semibold font-title text-xl mt-6">

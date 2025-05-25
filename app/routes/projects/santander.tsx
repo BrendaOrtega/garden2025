@@ -16,7 +16,7 @@ export default function santander() {
     <main className="bg-white">
       <Navbar />
       <section className="max-w-7xl mx-auto  w-[90%] md:w-ful pt-4 md:pt-16  pb-20">
-        <div className="w-full bg-[#BD5648] h-[280px] md:h-[680px] overflow-hidden rounded-[40px]  bg-cover">
+        <div className="w-full bg-[#BD5648] h-[280px] md:h-[420px] lg:h-[680px] overflow-hidden rounded-[40px]  bg-cover">
           <img
             className="h-auto w-full md:w-[80%] md:mx-auto ml-3 "
             src="/projects/santander/cover.png"

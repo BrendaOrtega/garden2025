@@ -15,7 +15,7 @@ export default function formmy() {
     <main className="bg-white">
       <Navbar />
       <section className="max-w-7xl mx-auto  w-[90%] md:w-ful pt-16  pb-20">
-        <div className="w-full h-[280px] md:h-[680px] overflow-hidden rounded-[40px] bg-gradient-to-r from-[#5265F6] to-[#835EF6]">
+        <div className="w-full h-[280px] md:h-[420px] lg:h-[680px] overflow-hidden rounded-[40px] bg-gradient-to-r from-[#5265F6] to-[#835EF6]">
           <img
             className="h-auto w-full md:w-[80%] mx-auto "
             src="/projects/formmy/cover.png"

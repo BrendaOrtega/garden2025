@@ -16,7 +16,7 @@ export default function lastplay() {
     <main className="bg-white">
       <Navbar />
       <section className="max-w-7xl mx-auto  w-[90%] md:w-ful pt-4 md:pt-16  pb-20">
-        <div className="w-full flex items-center bg-[#262F5F] h-[280px] md:h-[680px] overflow-hidden rounded-[40px]  bg-cover">
+        <div className="w-full flex items-center bg-[#262F5F] h-[280px] md:h-[420px] lg:h-[680px] overflow-hidden rounded-[40px]  bg-cover">
           <img
             alt="cover"
             className="h-auto w-full md:w-[80%] mx-auto mt-10 md:mt-20 "
@@ -103,7 +103,7 @@ export default function lastplay() {
             have not been included here. But, based on the research step
             results, the first design proposal was done in two parts:
           </p>
-          <div className="flex flex-wrap md:flex-nowrap gap-16 mt-12 md:mt-20">
+          <div className="flex flex-wrap lg:flex-nowrap gap-16 mt-12 md:mt-20">
             <div className="w-full md:w-[380px] grow">
               <img
                 alt="site map"

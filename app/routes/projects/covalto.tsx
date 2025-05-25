@@ -16,7 +16,7 @@ export default function constructoken() {
     <main className="bg-white">
       <Navbar />
       <section className="max-w-7xl mx-auto  w-[90%] md:w-ful pt-4 md:pt-16  pb-20">
-        <div className="w-full h-[280px] md:h-[680px] overflow-hidden rounded-[40px] bg-[#FFA800]">
+        <div className="w-full h-[280px] md:h-[420px] lg:h-[680px] overflow-hidden rounded-[40px] bg-[#FFA800]">
           <img
             className="h-auto w-full md:w-[80%] mx-auto "
             src="/projects/covalto/cover2.webp"
@@ -216,7 +216,7 @@ export default function constructoken() {
               establishments)
             </li>
           </ul>
-          <div className="flex justify-around mt-20 flex-wrap md:flex-nowrap">
+          <div className="flex justify-around mt-20 flex-wrap lg:flex-nowrap">
             <img
               alt="user comment"
               className="h-auto w-full md:w-auto md:h-36 object-cover"
@@ -255,7 +255,7 @@ export default function constructoken() {
           <h2 className="text-3xl md:text-4xl font-bold  text-black">
             Ideation & Prototyping
           </h2>
-          <div className="flex flex-wrap md:flex-nowrap gap-16 mt-12">
+          <div className="flex flex-wrap lg:flex-nowrap gap-16 mt-12">
             <div className="w-full md:w-[380px] grow hover:-translate-y-4 transition-all">
               <img
                 alt="site map"

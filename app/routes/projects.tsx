@@ -33,151 +33,150 @@ export default function Blog() {
             alt="saas cartel"
           />
         </div>
-        <div className="flex justify-between gap-12 lg:gap-20 flex-wrap mt-12 lg:mt-32 ">
-          {" "}
+        <div className="grid grid-cols-1 lg:grid-cols-2  mt-12 lg:mt-32 w-full gap-x-12 gap-y-10 lg:gap-y-0 xl:gap-0 ">
           <MotionContainer
-            className="bg-[#B097E3] w-full md:w-[inherit] h-[600px] pb-10 lg:h-[842px] "
+            className="bg-[#B097E3] w-full h-[600px] pb-10 md:pb-0 md:h-[580px] lg:h-[720px] xl:h-[842px] "
             id="uno"
             link="/projects/easybits"
             img="/easybits.webp"
             tags={["Product Design", "Webapp", "Frontend", "Saas"]}
             title="EasyBits"
             description="Unlocking online payments for creatives and digital content professionals"
-            imageClassName="top-20 md:top-40 -right-28 group-hover:-right-20 transition-all "
+            imageClassName="top-20 md:top-0 scale-100 md:scale-60 lg:scale-100 lg:top-40  -right-28 group-hover:none lg:group-hover:-right-20 transition-all "
           />
-          <div className="mt-0 lg:mt-16">
+          <div className="mt-0 lg:mt-16 col-span-1">
             <MotionContainer
               link="/projects/flink"
               id="dos"
               img="/flink.webp"
               // className="bg-[#B097E3]"
-              className="bg-[#0CCCB3] w-full md:w-[inherit]  h-[600px] pb-10 lg:h-[842px]"
+              className="bg-[#0CCCB3] w-full  h-[600px] pb-10 md:pb-0 md:h-[580px]  lg:h-[720px] xl:h-[842px]"
               tags={["Product Design", "App", "Fintech"]}
               title="Flink"
               description="Democratizing access to stock market investments in Mexico"
-              imageClassName="-top-0 md:top-0 -left-10 md:-left-14 scale-90 group-hover:scale-110 "
+              imageClassName="-top-10 md:-top-48 lg:top-0 -left-10 md:-left-14  scale-90 md:scale-60 lg:scale-90 group-hover:none lg:group-hover:scale-110 "
             />
           </div>
           <MotionContainer
             link="/projects/denik"
             img="/denik.webp"
-            className="bg-[#FFD25C] w-full md:w-[inherit] h-[600px] pb-10 lg:h-[842px]"
+            className="bg-[#FFD25C] w-full h-[600px] pb-10 md:pb-0 md:h-[580px]  lg:h-[720px] xl:h-[842px]"
             id="tres"
             tags={["Product Design", "Frontend", "Webapp", "Saas"]}
             title="Deník"
             description="The agenda to manage appointments, payments and reminders for entrepreneurs and small businesses"
-            imageClassName="top-0 md:top-20 scale-75 group-hover:scale-90 group-hover:translate-y-10"
+            imageClassName="top-0 md:-top-20 lg:top-20 scale-75 md:scale-50 lg:scale-75 group-hover:none lg:group-hover:scale-90 group-hover:none lg:group-hover:translate-y-10"
           />
-          <div className="mt-0 lg:mt-16">
+          <div className="mt-0 lg:mt-16 col-span-1">
             <MotionContainer
               link="/projects/constructoken"
               img="/token.webp"
-              className="bg-[#45C893] w-full md:w-[inherit] h-[600px] pb-10 lg:h-[842px]"
+              className="bg-[#45C893] w-full h-[600px] pb-10 md:pb-0 md:h-[580px]  lg:h-[720px] xl:h-[842px]"
               tags={["UX Design", "App", "Fintech"]}
               title="Constructoken"
               description="Offering financial solutions and construction options for self-produced housing"
-              imageClassName="-left-6 md:-left-10 top-0 group-hover:scale-110"
+              imageClassName="-left-6 top-0 md:-top-28 lg:top-0 scale-100 md:scale-75 lg:scale-100 md:-left-10  group-hover:scale-110"
             />
           </div>
           <MotionContainer
-            className="w-full md:w-[inherit] h-[600px] pb-10 lg:h-[842px]"
+            className="w-full h-[600px] pb-10 md:pb-0 md:h-[580px]  lg:h-[720px] xl:h-[842px]"
             link="/projects/covalto"
             img="/covalto.svg"
             tags={["Product Design", "App", "Fintech"]}
             title="Covalto"
             description="The Financial solution to manage expenses for Business"
-            imageClassName="w-[60%] top-36 md:top-54 left-[20%] right-0 bottom-0 group-hover:scale-80 "
+            imageClassName="w-[60%] md:w-[45%] lg:w-[60% ] top-36 md:top-28 lg:top-54 left-[20%] md:left-[30%] lg:left-[20%] right-0 bottom-0 group-hover:scale-80 "
           />
-          <div className="mt-0 lg:mt-16">
+          <div className="mt-0 lg:mt-16 col-span-1">
             <MotionContainer
               link="/projects/reform"
               img="/reform.webp"
-              className="bg-[#B097E3] w-full md:w-[inherit] h-[600px] pb-10 lg:h-[842px]"
+              className="bg-[#B097E3] w-full h-[600px] pb-10 md:pb-0 md:h-[580px]  lg:h-[720px] xl:h-[842px]"
               tags={["UI Design", "Prototyping", "App", "AI"]}
               title="Reform AI"
               description="Renovate your spaces using artificial intelligence and buy the furniture and services that you need in one place"
-              imageClassName="-right-0 top-10 md:top-32 scale-95 md:scale-120 group-hover:scale-110"
+              imageClassName="-right-0 top-10 md:-top-10 lg:top-32 scale-95 md:scale-75 lg:scale-120 group-hover:none lg:group-hover:scale-110"
             />
           </div>
           <MotionContainer
             link="/projects/santander"
             img="/personal.webp"
-            className="bg-[#F2B590] w-full md:w-[inherit] h-[600px] pb-10 lg:h-[842px]"
+            className="bg-[#F2B590] w-full h-[600px] pb-10 md:pb-0 md:h-[580px]  lg:h-[720px] xl:h-[842px]"
             tags={["Product Design", "App", "Webapp", "Banking"]}
             title="Santander"
             description="Web & Mobile App to access to financial services including payments, transfers and management"
-            imageClassName="-right-0 -top-48 group-hover:scale-110"
+            imageClassName="scale-100 md:scale-60 lg:scale-100 -right-0 md:-right-40 lg:-right-0 -top-48 md:-top-80 lg:-top-48 group-hover:none lg:group-hover:scale-110"
           />
-          <div className="mt-0 lg:mt-16">
+          <div className="mt-0 lg:mt-16 col-span-1">
             <MotionContainer
               theme="dark"
-              className="bg-[#0E0E10] w-full md:w-[inherit] h-[600px] pb-10 lg:h-[842px]"
+              className="bg-[#0E0E10] w-full h-[600px] pb-10 md:pb-0 md:h-[580px]  lg:h-[720px] xl:h-[842px]"
               link="/projects/uicourse"
               img="/ui-fx.webp"
               tags={["Design", "Webapp", "Frontend", "E-learning"]}
               title="UI Course"
-              imageClassName="-right-0 top-0 md:top-20 group-hover:-translate-x-16"
+              imageClassName="-right-0 top-0 md:-top-40 lg:top-20 group-hover:none lg:group-hover:-translate-x-16"
               description="A complete course to learn UI Design from the principles to practice"
             />
           </div>
           <MotionContainer
-            className="bg-[#F1ABA5] w-full md:w-[inherit] h-[600px] pb-10 lg:h-[842px]"
+            className="bg-[#F1ABA5] w-full h-[600px] pb-10 md:pb-0 md:h-[580px]  lg:h-[720px] xl:h-[842px]"
             link="/projects/lastplay"
             img="/play.webp"
             tags={["UI Design", "App", "Sports"]}
             title="LastPlay"
-            imageClassName="-right-16 top-6 md:top-20  group-hover:-translate-x-14 scale-100 md:scale-120"
+            imageClassName="-right-16 scale-100 md:scale-75 top-6 md:-top-20 lg:top-20 group-hover:none lg:group-hover:-translate-x-14 lg:scale-120 "
             description="The management application to organize and manage sports tournaments"
           />
           <div className="mt-0 lg:mt-16">
             <MotionContainer
               link="/projects/epros"
               img="/pros.webp"
-              className="bg-[#A3BC73] w-full md:w-[inherit] h-[600px] pb-10 lg:h-[842px]"
+              className="bg-[#A3BC73] w-full h-[600px] pb-10 md:pb-0 md:h-[580px]  lg:h-[720px] xl:h-[842px]"
               tags={["UX Design", "Website", "UI Design", "E-learning"]}
               title="English for Professionals"
               description="English courses for all levels, business and tourism orientation or personalized courses"
-              imageClassName="-right-16 top-10 md:top-20 group-hover:-translate-x-16 group-hover:translate-y-6 transition-all"
+              imageClassName="scale-100 md:scale-75 lg:scale-100 -right-16 top-10 md:-top-20 lg:top-20 group-hover:none lg:group-hover:-translate-x-16 group-hover:none lg:group-hover:translate-y-6 transition-all"
             />
           </div>
           <MotionContainer
-            className="bg-[#E9786E] w-full md:w-[inherit] h-[600px] pb-10 lg:h-[842px]"
+            className="bg-[#E9786E] w-full h-[600px] pb-10 md:pb-0 md:h-[580px]  lg:h-[720px] xl:h-[842px]"
             link="/projects/realstate"
             img="/projects/inmuebles.webp"
             tags={["Product Design", "Prototyping", "Webapp"]}
             title="Propiedades"
             description="Facilitating the process of buying and selling real estate properties for clients and sellers"
-            imageClassName="left-0 right-0 -top-32 md:-top-16 scale-75 transition-all rounded-xl"
+            imageClassName="left-0 scale-75 md:scale-50 right-0 -top-32 md:-top-80 lg:-top-16 lg:scale-75 transition-all rounded-xl"
           />
-          <div className="mt-0 lg:mt-16">
+          <div className="mt-0 lg:mt-16 col-span-1">
             <MotionContainer
               link="/projects/fixterorg"
               img="/projects/org.webp"
-              className="bg-[#85DDCB] w-full md:w-[inherit] h-[600px] pb-10 lg:h-[842px]"
+              className="bg-[#85DDCB] w-full h-[600px] pb-10 md:pb-0 md:h-[580px]  lg:h-[720px] xl:h-[842px]"
               tags={["Product Design", "Frontend", "Website", "Services"]}
               title="Fixter.org"
               description="Showing the b2b services we offer and our selected projects catalogue "
-              imageClassName="left-0 right-0 top-10 md:top-28 -rotate-6 scale-80 group-hover:rotate-6 group-hover:scale-75 transition-all"
+              imageClassName=" left-0 right-0 top-10 md:-top-16 lg:top-28 -rotate-6 scale-80 md:scale-50 lg:scale-80 group-hover:none lg:group-hover:rotate-6 group-hover:none lg:group-hover:scale-75 transition-all"
             />
           </div>
           <MotionContainer
-            className="bg-[#F85387] w-full md:w-[inherit] h-[600px] pb-10 lg:h-[842px]"
+            className="bg-[#F85387] w-full h-[600px] pb-10 md:pb-0 md:h-[580px]  lg:h-[720px] xl:h-[842px]"
             img="/projects/potentiia.png"
             link="/projects/potentiia"
             tags={["UX/UI Design", "Website", "Frontend"]}
             title="Potentiia"
             description="Helping people to get their goals through sport and business coaching programs "
-            imageClassName="m-[20%] w-[60%] top-28 md:top-48 "
+            imageClassName="m-[20%] w-[60%] top-28 md:top-6 lg:top-48 "
           />
-          <div className="mt-0 lg:mt-16">
+          <div className="mt-0 lg:mt-16 col-span-1">
             <MotionContainer
               link="/projects/azteca"
               img="/projects/azteca.webp"
-              className="bg-[#93E6EB] w-full md:w-[inherit] h-[600px] pb-10 lg:h-[842px]"
+              className="bg-[#93E6EB] w-full h-[600px] pb-10 md:pb-0 md:h-[580px]  lg:h-[720px] xl:h-[842px]"
               tags={["UX/UI Design", "E-commerce", "Health"]}
               title="Laboratorios Azteca"
               description="Digitizing access to clinical studies through e-commerce "
-              imageClassName="right-0 left-0 top-0 md:top-10 scale-80 "
+              imageClassName=" right-0 left-0 top-0 md:-top-40 lg:top-10 scale-80 md:scale-60 lg:scale-80 "
             />
           </div>
         </div>

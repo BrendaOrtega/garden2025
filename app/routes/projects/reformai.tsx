@@ -16,7 +16,7 @@ export default function reformai() {
     <main className="bg-white">
       <Navbar />
       <section className="max-w-7xl mx-auto  w-[90%] md:w-ful pt-4 md:pt-16  pb-20">
-        <div className="w-full flex items-center bg-reform h-[280px] md:h-[680px] overflow-hidden rounded-[40px]  bg-cover">
+        <div className="w-full flex items-center bg-reform h-[280px] md:h-[420px] lg:h-[680px] overflow-hidden rounded-[40px]  bg-cover">
           <img
             alt="cover"
             className="h-auto w-full md:w-[80%] mx-auto mt-6 md:mt-10 "

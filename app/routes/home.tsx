@@ -70,10 +70,10 @@ export default function Home() {
       <Navbar />
       <section className="max-w-5xl mx-auto h-fit pb-12 pt-12  lg:h-[70vh]  ">
         <div className="flex flex-wrap-reverse md:flex-nowrap items-center justify-between h-full  ">
-          <h1 className="text-[32px] md:text-6xl font-title w-full md:w-[63%] leading-snug lg:text-left text-center mt-6 lg:mt-0">
+          <h1 className="text-[32px] md:[54px] lg:text-6xl font-title w-full md:w-[63%] leading-snug lg:text-left text-center mt-6 lg:mt-0">
             Hello, I'm Brenda.
             <br /> I'm a{" "}
-            <span className="font-extrabold text-[32px] md:text-6xl text-brand">
+            <span className="font-extrabold text-[32px] md:[54px] lg:text-6xl text-brand">
               <FlipWords
                 words={[
                   "Product Designer",
@@ -184,22 +184,22 @@ const Gallery = () => {
         />
         <GalleryImage
           ref={ref}
-          className="rotate-0 hidden md:block"
+          className="rotate-0 hidden lg:block"
           img="/projects/foto7.webp"
         />
         <GalleryImage
           ref={ref}
-          className="-rotate-12 hidden md:block"
+          className="-rotate-12 hidden lg:block"
           img="/projects/foto8.webp"
         />
         <GalleryImage
           ref={ref}
-          className="rotate-12 hidden md:block"
+          className="rotate-12 hidden lg:block"
           img="/projects/foto9.webp"
         />
         <GalleryImage
           ref={ref}
-          className="-rotate-6 hidden md:block"
+          className="-rotate-6 hidden lg:block"
           img="/projects/foto10.webp"
         />
       </section>
@@ -317,7 +317,7 @@ export const Footer = ({ variant }: { variant?: string }) => {
       </div>
       <div
         onClick={handleClick}
-        className="absolute -right-6 lg:right-16 bottom-2 lg:bottom-16  "
+        className="absolute -right-6 md:right-0 lg:right-16 bottom-2 lg:bottom-16   "
       >
         <span className=" absolute w-full h-full  grid place-content-center">
           <FaArrowUpLong className="text-white text-2xl mx-auto" />

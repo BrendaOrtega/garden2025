@@ -16,7 +16,7 @@ export default function easybits() {
     <main className="bg-white">
       <Navbar />
       <section className="max-w-7xl mx-auto  w-[90%] md:w-ful pt-4 md:pt-16  pb-20">
-        <div className="w-full bg-easybits flex items-center h-[280px] md:h-[680px] overflow-hidden rounded-[40px]  bg-cover">
+        <div className="w-full bg-easybits flex items-center h-[280px] md:h-[420px] lg:h-[680px] overflow-hidden rounded-[40px]  bg-cover">
           <img
             alt="cover"
             className="h-auto w-full  md:w-[80%] mx-auto "
@@ -228,7 +228,7 @@ export default function easybits() {
               are unsure about how to sell digital assets.
             </li>
           </ul>
-          <div className="flex items-center justify-around mt-20 gap-y-6 md:gap-y-0 flex-wrap md:flex-nowrap">
+          <div className="flex items-center justify-around mt-20 gap-y-6 md:gap-y-0 flex-wrap lg:flex-nowrap">
             <img
               alt="user comment"
               className="h-auto w-full md:w-auto md:h-36 object-cover"
@@ -280,7 +280,7 @@ export default function easybits() {
             <div className="w-full md:w-[380px] grow hover:-translate-y-4 transition-all">
               <img
                 alt="site map"
-                className="rounded-2xl h-[200px] md:h-[340px] object-cover object-top w-full border border-white/10"
+                className="rounded-2xl h-[200px] lg:h-[340px] object-cover object-top w-full border border-white/10"
                 src="/projects/easybits/img16.webp"
               />
               <h3 className="text-black text-xl mt-6 font-semibold">
@@ -295,7 +295,7 @@ export default function easybits() {
             <div className="w-full md:w-[380px] grow hover:-translate-y-4 transition-all">
               <img
                 alt="user flow"
-                className="rounded-2xl h-[200px] md:h-[340px] w-full object-cover border border-dark/10"
+                className="rounded-2xl h-[200px] lg:h-[340px] w-full object-cover border border-dark/10"
                 src="/projects/easybits/img5.webp"
               />
               <h3 className="text-black text-xl font-semibold mt-6">

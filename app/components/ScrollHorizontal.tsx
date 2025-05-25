@@ -6,7 +6,7 @@ import {
   useScroll,
   useTransform,
 } from "motion/react";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaArrowTrendUp } from "react-icons/fa6";
 import { Link } from "react-router";
 import { twMerge } from "tailwind-merge";
@@ -27,10 +27,10 @@ export const ScrollHorizontal = () => {
         >
           <div className="w-max flex flex-col lg:flex-row h-screen gap-8 xl:gap-20 items-center bg-black pl-4 lg:pl-0 pt-10 lg:pt-0 ">
             <div className="w-full xl:w-[340px] ml-0 xl:ml-48 flex flex-row md:flex-col gap-4 ">
-              <h3 className="text-3xl xl:text-5xl font-title md:text-6xl text-white font-bold ">
+              <h3 className="text-3xl xl:text-5xl font-title md:text-4xl text-white font-bold ">
                 Selected projects
               </h3>
-              <p className="text-lg md:text-xl text-graylight font-light mt-2 lg:mt-12">
+              <p className="text-lg lg:text-xl text-graylight font-light mt-2 lg:mt-12">
                 Take a look at my favorites projects
               </p>
             </div>
@@ -131,6 +131,13 @@ export const MotionContainer = ({
   theme?: string;
 }) => {
   const [scope, animate] = useAnimate();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaWatcher = window.matchMedia("(max-width: 768px)");
+    setIsMobile(mediaWatcher.matches);
+  }, []);
+
   const handleMouseEnter = () => {
     animate("#button", {
       opacity: 1,
@@ -149,86 +156,88 @@ export const MotionContainer = ({
     animate("#content", { transform: "translateY(0px)" });
   };
   return (
-    <motion.div
-      layoutId={id}
-      // whileInView={{ filter: "blur(0px)", opacity: 1 }}
-      // transition={{ delay: 0.2 }}
-      // initial={{ filter: "blur(9px)", opacity: 0 }}
-      viewport={{ once: true }}
-      className={twMerge(" pt-0 pointer-events-none md:pointer-events-auto")}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      <div
-        className={cn(
-          "w-[400px] lg:w-[560px] h-[75vh] lg:h-[842px] rounded-[40px] overflow-hidden relative bg-[#E9E9E9] flex items-end group",
-
-          {
-            "items-center justify-center text-center px-6":
-              variant === "invite",
-          },
-          className
-        )}
+    <Link to={link}>
+      <motion.div
+        layoutId={id}
+        // whileInView={{ filter: "blur(0px)", opacity: 1 }}
+        // transition={{ delay: 0.2 }}
+        // initial={{ filter: "blur(9px)", opacity: 0 }}
+        viewport={{ once: true }}
+        className={twMerge(" pt-0 col-span-1 flex justify-center ")}
+        onMouseEnter={isMobile ? undefined : handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
-        <img
-          src={img}
-          className={cn("absolute transition-all ", imageClassName)}
-          alt="cat"
-        />
-        {variant === "invite" ? (
-          <Link to={link}>
-            <div className="">
-              <p className="text-4xl font-title text-center flex justify-center gap-4">
-                View all projects <FaArrowTrendUp />
-              </p>
-              <img className="-mb-80" src="/victory.webp" alt="cat hand" />
-            </div>
-          </Link>
-        ) : (
-          <div
-            className={cn(" px-6 md:px-8 pb-10 md:pb-20 translate-y-[50px]")}
-            ref={scope}
-          >
-            <AnimatePresence>
-              <div id="content">
-                <h2
-                  className={cn("text-3xl font-bold text-dark", {
-                    "text-white": theme === "dark",
-                  })}
-                >
-                  {title}
-                </h2>
-                <div
-                  className={cn("flex gap-3 mt-4 text-dark/70 font-light", {
-                    "text-graylight/80 ": theme === "dark",
-                  })}
-                >
-                  {tags.map((tag, index) => (
-                    <Tag key={index} label={tag} />
-                  ))}{" "}
-                </div>
-                <p
-                  className={cn(
-                    "text-dark  mt-4 text-lg md:text-xl font-subtitle",
-                    {
-                      "text-graylight ": theme === "dark",
-                    }
-                  )}
-                >
-                  {description}
+        <div
+          className={cn(
+            "w-[400px] lg:w-[560px] h-[75vh] lg:h-[842px] rounded-[40px] overflow-hidden relative bg-[#E9E9E9] flex items-end group",
+
+            {
+              "items-center justify-center text-center px-6":
+                variant === "invite",
+            },
+            className
+          )}
+        >
+          <img
+            src={img}
+            className={cn("absolute transition-all ", imageClassName)}
+            alt="cat"
+          />
+          {variant === "invite" ? (
+            <Link to={link}>
+              <div className="">
+                <p className="text-4xl font-title text-center flex justify-center gap-4">
+                  View all projects <FaArrowTrendUp />
                 </p>
+                <img className="-mb-80" src="/victory.webp" alt="cat hand" />
               </div>
-              <div className="block md:hidden">
-                <SimpleButton theme={theme} link={link} />
-              </div>
-              <motion.div id="button" className="opacity-0 hidden md:block">
-                <SimpleButton theme={theme} link={link} />
-              </motion.div>
-            </AnimatePresence>
-          </div>
-        )}
-      </div>
-    </motion.div>
+            </Link>
+          ) : (
+            <div
+              className={cn(" px-6 md:px-8 pb-10 md:pb-20 translate-y-[50px]")}
+              ref={scope}
+            >
+              <AnimatePresence>
+                <div id="content">
+                  <h2
+                    className={cn("text-3xl font-bold text-dark", {
+                      "text-white": theme === "dark",
+                    })}
+                  >
+                    {title}
+                  </h2>
+                  <div
+                    className={cn("flex gap-3 mt-4 text-dark/70 font-light", {
+                      "text-graylight/80 ": theme === "dark",
+                    })}
+                  >
+                    {tags.map((tag, index) => (
+                      <Tag key={index} label={tag} />
+                    ))}{" "}
+                  </div>
+                  <p
+                    className={cn(
+                      "text-dark  mt-4 text-lg md:text-xl font-subtitle",
+                      {
+                        "text-graylight ": theme === "dark",
+                      }
+                    )}
+                  >
+                    {description}
+                  </p>
+                </div>
+                <div className="block lg:hidden">
+                  <SimpleButton theme={theme} link={link} />
+                </div>
+                <motion.div id="button" className="opacity-0 hidden lg:block">
+                  <SimpleButton theme={theme} link={link} />
+                </motion.div>
+              </AnimatePresence>
+            </div>
+          )}
+        </div>
+      </motion.div>{" "}
+    </Link>
   );
 };
 

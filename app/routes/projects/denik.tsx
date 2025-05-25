@@ -16,7 +16,7 @@ export default function denik() {
     <main className="bg-white">
       <Navbar />
       <section className="max-w-7xl mx-auto  w-[90%] md:w-ful pt-4 md:pt-16  pb-20">
-        <div className="w-full bg-denik h-[280px] md:h-[680px] overflow-hidden rounded-[40px] flex items-center  bg-cover">
+        <div className="w-full bg-denik h-[280px] md:h-[420px] lg:h-[680px] overflow-hidden rounded-[40px] flex items-center  bg-cover">
           <img
             className="h-auto w-full md:w-[80%] mx-auto  "
             src="/projects/denik/cover.webp"

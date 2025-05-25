@@ -46,7 +46,7 @@ export const CircularButton = ({
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       ref={scope}
-      className={`w-[160px] h-[160px] scale-50 md:scale-100 origin-center  grid place-content-center cursor-pointer `}
+      className={`w-[160px] h-[160px] scale-50 lg:scale-100 origin-center  grid place-content-center cursor-pointer `}
     >
       {letters.split("").map((l, index) => (
         <Letter index={index} key={index} letter={l} />

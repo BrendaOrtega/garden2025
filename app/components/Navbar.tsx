@@ -97,7 +97,7 @@ export const Navbar = () => {
       className=" w-full relative px-4 md:px-[5%]  xl:px-0  bg-white  z-[100]"
     >
       <nav className="flex relative z-[120] max-w-7xl mx-auto py-2 items-center justify-between ">
-        <Link to="/" className=" relative  w-fit">
+        <Link to="/" className=" relative  w-[160px] ">
           <AnimatePresence mode="popLayout">
             {!michi ? (
               <motion.div
