@@ -19,13 +19,13 @@ export const ScrollHorizontal = () => {
   useMotionValueEvent(scrollYProgress, "change", (latest) => {});
 
   return (
-    <section className="h-[660vh] lg:h-[580vh]" ref={ref}>
+    <section className="h-[680vh] lg:h-[540vh] xl:h-[580vh]" ref={ref}>
       <div className="sticky bg-transparent top-0 w-full overflow-x-hidden ">
         <motion.div
           style={{ x }}
-          className="w-max flex h-screen gap-20 items-center pr-[150vw] lg:pr-[40vw] "
+          className="w-max flex  h-[110vh] gap-20 items-center pr-[150vw] lg:pr-[40vw] "
         >
-          <div className="w-max flex flex-col lg:flex-row h-screen gap-8 xl:gap-20 items-center bg-black pl-4 lg:pl-0 pt-10 lg:pt-0 ">
+          <div className="w-max flex flex-col lg:flex-row h-[110vh] gap-8 xl:gap-20 items-center bg-black pb-12 pl-4 lg:pl-0 pt-10 lg:pt-0 ">
             <div className="w-full xl:w-[340px] ml-0 xl:ml-48 flex flex-row md:flex-col gap-4 ">
               <h3 className="text-3xl xl:text-5xl font-title md:text-4xl text-white font-bold ">
                 Selected projects
@@ -38,7 +38,7 @@ export const ScrollHorizontal = () => {
               <MotionContainer
                 link="/projects/easybits"
                 id="uno"
-                className="bg-[#B097E3]"
+                className="pb-6 bg-[#B097E3]"
                 img="/easybits.webp"
                 tags={["Product Design", "Frontend", "Saas"]}
                 title="EasyBits"
@@ -50,7 +50,7 @@ export const ScrollHorizontal = () => {
                 id="dos"
                 img="/flink.webp"
                 // className="bg-[#B097E3]"
-                className="bg-[#0CCCB3]"
+                className="pb-6 bg-[#0CCCB3]"
                 tags={["Product Design", "Fintech"]}
                 title="Flink"
                 description="Democratizing access to stock market investments in Mexico"
@@ -60,7 +60,7 @@ export const ScrollHorizontal = () => {
               <MotionContainer
                 link="/projects/denik"
                 img="/denik.webp"
-                className="bg-[#FFD25C]"
+                className="pb-6 bg-[#FFD25C]"
                 id="tres"
                 tags={["Product Design", "Frontend", "Saas"]}
                 title="Deník"
@@ -70,13 +70,14 @@ export const ScrollHorizontal = () => {
               <MotionContainer
                 link="/projects/constructoken"
                 img="/token.webp"
-                className="bg-[#45C893]"
+                className="pb-6 bg-[#45C893]"
                 tags={["UX Design", "Fintech"]}
                 title="Constructoken"
                 description="Offering financial solutions and construction options for self-produced housing"
                 imageClassName="-left-8 top-0 scale-110 group-hover:scale-120"
               />
               <MotionContainer
+                className="pb-6 "
                 link="/projects/covalto"
                 img="/covalto.svg"
                 tags={["Product Design", "Fintech"]}
@@ -87,7 +88,7 @@ export const ScrollHorizontal = () => {
               <MotionContainer
                 link="/projects/santander"
                 img="/personal.webp"
-                className="bg-[#F2B590]"
+                className="pb-6 bg-[#F2B590]"
                 tags={["UX/UI Design", "App", "Webapp", "Banking"]}
                 title="Santander"
                 description="Web & Mobile App to access to financial services including payments, transfers and management"
@@ -97,7 +98,7 @@ export const ScrollHorizontal = () => {
               <MotionContainer
                 link="/projects"
                 variant="invite"
-                className="bg-[#E0B2BB]"
+                className="pb-6 bg-[#E0B2BB]"
               />
             </div>
           </div>
@@ -169,7 +170,7 @@ export const MotionContainer = ({
       >
         <div
           className={cn(
-            "w-[400px] lg:w-[560px] h-[75vh] lg:h-[842px] rounded-[40px] overflow-hidden relative bg-[#E9E9E9] flex items-end group",
+            "w-[400px] lg:w-[560px] min-h-[584px] h-[75vh] lg:h-[842px] rounded-[40px] overflow-hidden relative bg-[#E9E9E9] flex items-end group",
 
             {
               "items-center justify-center text-center px-6":
@@ -178,11 +179,13 @@ export const MotionContainer = ({
             className
           )}
         >
-          <img
-            src={img}
-            className={cn("absolute transition-all ", imageClassName)}
-            alt="cat"
-          />
+          {img ? (
+            <img
+              src={img}
+              className={cn("absolute transition-all ", imageClassName)}
+              alt="image"
+            />
+          ) : null}
           {variant === "invite" ? (
             <Link to={link}>
               <div className="">

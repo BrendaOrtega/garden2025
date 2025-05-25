@@ -80,7 +80,7 @@ export const InfiniteMovingCards = ({
                   />
                   <img
                     className={cn(
-                      "  object-center w-[180px] lg:w-[200px] mx-auto h-[220px] lg:h-[260px] rounded-4xl object-cover border-black/10 border ",
+                      "  object-center w-[180px] pointer-events-none lg:w-[200px] mx-auto h-[220px] lg:h-[260px] rounded-4xl object-cover border-black/10 border ",
                       {
                         "object-contain w-40 border-transparent":
                           item.variant === "blog",
@@ -115,7 +115,7 @@ export const InfiniteMovingCards = ({
                     alt="loader"
                   />
                   <img
-                    className="rounded-2xl border object-left border-black/10 w-[180px] lg:w-[220px] mx-auto h-[220px] lg:h-[260px] object-cover"
+                    className="rounded-2xl pointer-events-none border object-left border-black/10 w-[180px] lg:w-[220px] mx-auto h-[220px] lg:h-[260px] object-cover"
                     src={item.image}
                     alt="item"
                   />

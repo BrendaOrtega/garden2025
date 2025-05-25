@@ -110,7 +110,6 @@ export default function fixtergeek() {
               <img
                 alt="cover"
                 src={`/projects/fixtergeek/img1.png`}
-                alt="hero"
                 className="mx-auto h-auto rounded-2xl  w-full object-left-top"
                 draggable={false}
               />

@@ -69,6 +69,14 @@ li {
 .denik {
   background-image: url("/projects/denik1.webp");
 }
+.scrollbar::-webkit-scrollbar {
+  display: none !important;
+}
+
+.scrollbar {
+  -ms-overflow-style: none !important; /* IE and Edge */
+  scrollbar-width: none !important; /* Firefox */
+}
 
 @keyframes scrolling {
   from {

@@ -26,7 +26,7 @@ export default function Saas() {
 
 const Form = () => {
   return (
-    <section className="max-w-2xl h-full  mx-auto mt-32 lg:mt-48  ">
+    <section className="max-w-2xl h-svh  mx-auto mt-32 lg:mt-48  ">
       <div>
         <div className="flex flex-col items-center gap-4 lg:gap-6 px-4 mb-3 lg:mb-10 text-center">
           <h3 className="text-4xl lg:text-5xl font-title">

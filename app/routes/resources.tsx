@@ -297,7 +297,7 @@ const CourseCard = ({
             alt="cat loader"
           />
           <img
-            className="rounded-2xl object-cover w-full h-40 relative z-10"
+            className="rounded-2xl object-cover w-full h-40 relative z-10 pointer-events-none"
             src={image}
           />
         </div>
