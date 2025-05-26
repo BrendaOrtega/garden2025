@@ -113,7 +113,7 @@ export default function Home() {
         </div>
         <section
           key={233}
-          className="bg-[url(/cover-m.svg)] lg:bg-[url(/cover.svg)]  bg-bottom  object-contain min-h-dvh scrollbar  "
+          className="bg-[url(/cover-m.svg)] lg:bg-[url(/cover.svg)]  bg-bottom md:bg-center  object-contain min-h-dvh scrollbar  "
           ref={target}
         >
           <ScrollHorizontal />
@@ -138,13 +138,13 @@ export default function Home() {
 const Gallery = () => {
   const ref = useRef(null);
   return (
-    <main className=" h-[200px] lg:h-[500px]  w-full pt-10 lg:pt-28 relative -top-28 z-50">
+    <main className=" h-[200px] lg:h-[500px]  w-full pt-10 lg:pt-28 relative  -top-40 z-50">
       <h2 className="text-white text-center justify-center text-2xl lg:text-4xl  pl-10 md:pl-0 font-title flex items-center">
         Play with my pictures{" "}
         <img
           className="w-32 lg:w-44 -ml-8"
           src="/loader4.gif"
-          alt="cat laoder"
+          alt="cat with laptop"
         />
       </h2>
 
