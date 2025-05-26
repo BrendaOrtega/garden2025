@@ -23,12 +23,12 @@ export const Button = ({
         scale.set(1);
       }}
       custom={2}
-      style={{
-        scale,
-      }}
+      // style={{
+      //   scale,
+      // }}
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 1, type: "spring", delay }}
+      transition={{ duration: 1, bounce: 0.2, type: "spring", delay }}
       className={twMerge(" cursor-pointer ", className)}
     >
       <button

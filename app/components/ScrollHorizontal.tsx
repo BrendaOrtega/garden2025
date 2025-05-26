@@ -19,7 +19,7 @@ export const ScrollHorizontal = () => {
   useMotionValueEvent(scrollYProgress, "change", (latest) => {});
 
   return (
-    <section className="h-[680vh] lg:h-[540vh] xl:h-[580vh]" ref={ref}>
+    <section className="h-[600vh] lg:h-[540vh] xl:h-[580vh]" ref={ref}>
       <div className="sticky bg-transparent top-0 w-full overflow-x-hidden ">
         <motion.div
           style={{ x }}

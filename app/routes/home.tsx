@@ -113,7 +113,7 @@ export default function Home() {
         </div>
         <section
           key={233}
-          className="bg-[url(/cover-m.svg)] lg:bg-[url(/cover.svg)]  bg-center object-contain min-h-screen scrollbar  "
+          className="bg-[url(/cover-m.svg)] lg:bg-[url(/cover.svg)]  bg-bottom  object-contain min-h-dvh scrollbar  "
           ref={target}
         >
           <ScrollHorizontal />
@@ -127,7 +127,7 @@ export default function Home() {
         titles={["UX design", "UI design", "Product Design", "Web design"]}
         images={["/ux.webp", "/ui.webp", "/pd.webp", "/web.webp"]}
       />
-      <div className="overflow-x-hidden w-full bg-black pt-40">
+      <div className="overflow-x-hidden box-border w-screen bg-black pt-40">
         <Gallery />
         <Footer />{" "}
       </div>
@@ -138,7 +138,7 @@ export default function Home() {
 const Gallery = () => {
   const ref = useRef(null);
   return (
-    <main className=" h-[200px] lg:h-[500px] pt-10 lg:pt-28 relative -top-28 z-50">
+    <main className=" h-[200px] lg:h-[500px]  w-full pt-10 lg:pt-28 relative -top-28 z-50">
       <h2 className="text-white text-center justify-center text-2xl lg:text-4xl  pl-10 md:pl-0 font-title flex items-center">
         Play with my pictures{" "}
         <img
@@ -256,11 +256,11 @@ export const Footer = ({ variant }: { variant?: string }) => {
   return (
     <section
       className={cn(
-        "h-dvh bg-black flex items-center justify-center relative overflow-hidden md:overflow-auto ",
+        "h-dvh bg-black flex items-center justify-center relative w-full overflow-hidden md:overflow-auto ",
         { "h-fit py-12": variant === "small" }
       )}
     >
-      <div className="text-center text-2xl ">
+      <div className="text-center text-2xl  ">
         <p className="text-lg md:text-xl text-graylight mb-6 font-light">
           The best ideas start as conversations
         </p>
@@ -317,7 +317,7 @@ export const Footer = ({ variant }: { variant?: string }) => {
       </div>
       <div
         onClick={handleClick}
-        className="absolute -right-6 md:right-0 lg:right-16 bottom-2 lg:bottom-16   "
+        className="absolute scale-50 lg:scale-100 overflow-hidden -right-6 md:right-0 lg:right-16 bottom-2 lg:bottom-16  "
       >
         <span className=" absolute w-full h-full  grid place-content-center">
           <FaArrowUpLong className="text-white text-2xl mx-auto" />
@@ -339,7 +339,7 @@ const About = ({ text, texttwo }: { text: string; texttwo: string }) => {
   return (
     <section
       ref={target}
-      className="h-fit py-20 lg:py-40 bg-white flex flex-col items-start justify-center relative"
+      className="h-fit py-20 lg:py-40 bg-white flex flex-col items-start w-full overflow-hidden justify-center relative"
     >
       <div className="max-w-7xl mx-auto px-4 md:px-[5%] xl:px-0">
         <img className="w-16 lg:w-24 mb-6" src="/yarn2.webp" alt="estambre" />
