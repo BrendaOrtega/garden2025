@@ -475,7 +475,7 @@ const Skills = ({
     offset: ["start start", "end end"],
   });
   return (
-    <section ref={target} className="h-[300vh] lg:h-[350vh] scrollbar">
+    <section ref={target} className="h-[300vh] lg:h-[350vh] scrollbar scrollbar-x-hidden">
       <div className="sticky top-0 bg-black pt-10 lg:pt-40 h-[105vh] text-white">
         <div className="grid place-content-center h-full pt-0">
           <div>

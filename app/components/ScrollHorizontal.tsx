@@ -58,10 +58,10 @@ export const ScrollHorizontal = ({ show = false }: { show?: boolean }) => {
       <div className="sticky bg-black top-0 w-full h-screen overflow-hidden ">
         <motion.div
           ref={cardsContainerRef}
-          style={{ x }}
-          className="flex h-full w-full items-center relative z-20 pl-4 md:pl-12 lg:pl-24 " // Padding inicial
+          style={{ x, willChange: 'transform' }}
+          className="flex h-full w-full items-center pt-14 md:pt-0 relative z-20 pl-4 md:pl-12 lg:pl-24 scrollbar-hide " // Padding inicial
         >
-          <span className="absolute top-8 left-4 flex md:hidden gap-4">
+          <span className="absolute top-6 md:top-10 left-4 flex md:hidden gap-4 ">
               <h3 className="text-3xl xl:text-5xl font-title text-white w-fit font-bold ">
               Selected projects
             </h3>
