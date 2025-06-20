@@ -11,100 +11,184 @@ import { FaArrowTrendUp } from "react-icons/fa6";
 import { Link } from "react-router";
 import { twMerge } from "tailwind-merge";
 import { cn } from "~/utils/cn";
+import { useMatchMedia } from "~/hooks/useMatchMedia";
 
-export const ScrollHorizontal = () => {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({ target: ref });
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-85%"]);
-  useMotionValueEvent(scrollYProgress, "change", (latest) => {});
+export const ScrollHorizontal = ({ show = false }: { show?: boolean }) => {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const cardsContainerRef = useRef<HTMLDivElement>(null);
+  
+  const [dynamicHeight, setDynamicHeight] = useState("auto");
+  const [scrollRange, setScrollRange] = useState(0);
+
+  useEffect(() => {
+    const calculateLayout = () => {
+      if (cardsContainerRef.current && scrollContainerRef.current) {
+        const cardsWidth = cardsContainerRef.current.scrollWidth;
+        const viewportWidth = window.innerWidth;
+        const scrollableDistance = cardsWidth - viewportWidth;
+        
+        // Solo aplicar si hay contenido para scrollear
+        if (scrollableDistance > 0) {
+          setScrollRange(scrollableDistance);
+          // La altura dinámica da espacio para que el scroll vertical ocurra
+          // Aumentar el multiplicador (e.g., * 2) hará el scroll más lento/largo
+          setDynamicHeight(`${scrollableDistance * 1.5}px`);
+        } else {
+          setScrollRange(0);
+          setDynamicHeight("100vh"); // Altura por defecto si no hay scroll
+        }
+      }
+    };
+
+    calculateLayout();
+    window.addEventListener("resize", calculateLayout);
+    return () => window.removeEventListener("resize", calculateLayout);
+  }, [show]); // Recalcular si 'show' cambia y el contenido aparece
+
+  const { scrollYProgress } = useScroll({ target: scrollContainerRef });
+  
+  const x = useTransform(scrollYProgress, [0, 1], [0, -scrollRange]);
+
+  // Animación del texto basada en el scroll
+  const textY = useTransform(scrollYProgress, [0.8, 1], ["20vh", "0vh"]);
+  const textOpacity = useTransform(scrollYProgress, [0.8, 1], [0, 1]);
 
   return (
-    <section className="h-[600vh] lg:h-[540vh] xl:h-[580vh]" ref={ref}>
-      <div className="sticky bg-transparent top-0 w-full overflow-x-hidden ">
+    <section ref={scrollContainerRef} style={{ height: dynamicHeight }} className="relative">
+      <div className="sticky bg-black top-0 w-full h-screen overflow-hidden">
         <motion.div
+          ref={cardsContainerRef}
           style={{ x }}
-          className="w-max flex  h-[110vh] gap-20 items-center pr-[150vw] lg:pr-[40vw] "
+          className="flex h-full items-center relative z-20 pl-4 md:pl-12 lg:pl-24" // Padding inicial
         >
-          <div className="w-max flex flex-col lg:flex-row h-[110vh] gap-8 xl:gap-20 items-center bg-black pb-12 pl-4 lg:pl-0 pt-10 lg:pt-0 ">
-            <div className="w-full xl:w-[340px] ml-0 xl:ml-48 flex flex-row md:flex-col gap-4 ">
-              <h3 className="text-3xl xl:text-5xl font-title md:text-4xl text-white font-bold ">
-                Selected projects
-              </h3>
-              <p className="text-lg lg:text-xl text-graylight font-light mt-2 lg:mt-12">
-                Take a look at my favorites projects
-              </p>
-            </div>
-            <div className=" flex gap-12 lg:gap-20">
-              <MotionContainer
-                link="/projects/easybits"
-                id="uno"
-                className="pb-6 bg-[#B097E3]"
-                img="/easybits.webp"
-                tags={["Product Design", "Frontend", "Saas"]}
-                title="EasyBits"
-                description="Unlocking online payments for creatives and digital content professionals"
-                imageClassName="top-20 md:top-40 -right-28 group-hover:-right-20 transition-all "
-              />
-              <MotionContainer
-                link="/projects/flink"
-                id="dos"
-                img="/flink.webp"
-                // className="bg-[#B097E3]"
-                className="pb-6 bg-[#0CCCB3]"
-                tags={["Product Design", "Fintech"]}
-                title="Flink"
-                description="Democratizing access to stock market investments in Mexico"
-                imageClassName="top-0 -left-8 md:-left-14 group-hover:scale-110 "
-              />
+          <span className="absolute top-8 left-4 flex md:hidden gap-4">
+              <h3 className="text-3xl xl:text-5xl font-title text-white w-fit font-bold ">
+              Selected projects
+            </h3>
+          </span>
+       
 
-              <MotionContainer
-                link="/projects/denik"
-                img="/denik.webp"
-                className="pb-6 bg-[#FFD25C]"
-                id="tres"
-                tags={["Product Design", "Frontend", "Saas"]}
-                title="Deník"
-                description="The agenda to manage appointments, payments and reminders for entrepreneurs and small businesses"
-                imageClassName="top-16 md:top-20 scale-80 group-hover:scale-90 group-hover:translate-y-10"
-              />
-              <MotionContainer
-                link="/projects/constructoken"
-                img="/token.webp"
-                className="pb-6 bg-[#45C893]"
-                tags={["UX Design", "Fintech"]}
-                title="Constructoken"
-                description="Offering financial solutions and construction options for self-produced housing"
-                imageClassName="-left-8 top-0 scale-110 group-hover:scale-120"
-              />
-              <MotionContainer
-                className="pb-6 "
-                link="/projects/covalto"
-                img="/covalto.svg"
-                tags={["Product Design", "Fintech"]}
-                title="Covalto"
-                description="The Financial solution to manage expenses for Business"
-                imageClassName="w-[60%] top-32 md:top-54 left-[20%] right-0 bottom-0 group-hover:scale-80 "
-              />
-              <MotionContainer
-                link="/projects/santander"
-                img="/personal.webp"
-                className="pb-6 bg-[#F2B590]"
-                tags={["UX/UI Design", "App", "Webapp", "Banking"]}
-                title="Santander"
-                description="Web & Mobile App to access to financial services including payments, transfers and management"
-                imageClassName="-right-0 -top-48 group-hover:scale-110"
-              />
-
-              <MotionContainer
-                link="/projects"
-                variant="invite"
-                className="pb-6 bg-[#E0B2BB]"
-              />
-            </div>
+          {/* Contenido del carrusel */}
+          <div className="w-full xl:w-[340px] flex-shrink-0 flex-col gap-4 pr-8 hidden md:flex">
+            <h3 className="text-3xl xl:text-5xl font-title text-white font-bold">
+              Selected projects
+            </h3>
+            <p className="text-lg lg:text-xl text-graylight font-light mt-2 lg:mt-12">
+              Take a look at my favorites projects
+            </p>
           </div>
+          <div className="flex gap-12 lg:gap-20 ">
+            {show && (
+              <>
+                <MotionContainer
+                  link="/projects/easybits"
+                  id="uno"
+                  className="pb-6 bg-[#B097E3]"
+                  img="/easybits.webp"
+                  tags={["Product Design", "Frontend", "Saas"]}
+                  title="EasyBits"
+                  description="Unlocking online payments for creatives and digital content professionals"
+                  imageClassName="top-20 md:top-40 -right-28 group-hover:-right-20 transition-all "
+                />
+                <MotionContainer
+                  link="/projects/flink"
+                  id="dos"
+                  img="/flink.webp"
+                  className="pb-6 bg-[#0CCCB3]"
+                  tags={["Product Design", "Fintech"]}
+                  title="Flink"
+                  description="Democratizing access to stock market investments in Mexico"
+                  imageClassName="top-0 -left-8 md:-left-14 group-hover:scale-110 "
+                />
+                <MotionContainer
+                  link="/projects/denik"
+                  img="/denik.webp"
+                  className="pb-6 bg-[#FFD25C]"
+                  id="tres"
+                  tags={["Product Design", "Frontend", "Saas"]}
+                  title="Deník"
+                  description="The agenda to manage appointments, payments and reminders for entrepreneurs and small businesses"
+                  imageClassName="top-16 md:top-20 scale-80 group-hover:scale-90 group-hover:translate-y-10"
+                />
+                <MotionContainer
+                  link="/projects/constructoken"
+                  img="/token.webp"
+                  className="pb-6 bg-[#45C893]"
+                  tags={["UX Design", "Fintech"]}
+                  title="Constructoken"
+                  description="Offering financial solutions and construction options for self-produced housing"
+                  imageClassName="-left-8 top-0 scale-110 group-hover:scale-120"
+                />
+                <MotionContainer
+                  className="pb-6 "
+                  link="/projects/covalto"
+                  img="/covalto.svg"
+                  tags={["Product Design", "Fintech"]}
+                  title="Covalto"
+                  description="The Financial solution to manage expenses for Business"
+                  imageClassName="w-[60%] top-32 md:top-54 left-[20%] right-0 bottom-0 group-hover:scale-80 "
+                />
+                <MotionContainer
+                  link="/projects/santander"
+                  img="/personal.webp"
+                  className="pb-6 bg-[#F2B590]"
+                  tags={["UX/UI Design", "App", "Webapp", "Banking"]}
+                  title="Santander"
+                  description="Web & Mobile App to access to financial services including payments, transfers and management"
+                  imageClassName="-right-0 -top-48 group-hover:scale-110"
+                />
+                <MotionContainer
+                  link="/projects"
+                  variant="invite"
+                  className="pb-6 bg-[#E0B2BB]"
+                />
+              </>
+            )}
+          </div>
+        </motion.div>
+        <motion.div
+          style={{ y: textY, opacity: textOpacity }}
+          className="absolute inset-0 flex items-center justify-center pointer-events-none z-10"
+        >
+          <StatsSection />
         </motion.div>
       </div>
     </section>
+  );
+};
+
+const LaurelWreath = ({ className }: { className?: string }) => (
+  <svg className={className} width="42" height="114" viewBox="0 0 42 114" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M40.8333 1.5C22.8333 30.5 -1.16669 64.1667 20.1666 112.5" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+    <path d="M20.1667 112.5C19.1667 106.833 17.1667 102.333 14.8334 99.5" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+    <path d="M24.8333 97C22.4167 92.2 19.5 87.5 16.8333 84.5" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+    <path d="M29.1667 82.5C26.5 77.8333 23.3333 73.1667 20.1667 70" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+    <path d="M33.1667 68.5C30.0833 64.3 26.5 59.8333 23.1667 56.5" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+    <path d="M36.5 55C33.5 50.8333 29.6667 46.5 26.1667 43.5" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+    <path d="M39.1667 41.5C36.4167 37.7 33 33.6667 29.5 30.5" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+    <path d="M40.8333 27.5C38.5 24.5 35.6667 21.1667 32.5 18.5" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+    <path d="M41.5 13.5C39.5 11.1667 37.1667 8.5 34.8333 6.5" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+  </svg>
+);
+
+const StatItem = ({ number, text }: { number: string; text: string }) => (
+  <div className="flex items-center gap-4 text-white">
+    <LaurelWreath className="transform scale-x-[-1]" />
+    <div className="text-center w-48">
+      <p className="text-5xl font-bold">{number}</p>
+      <p className="text-xl font-light mt-2">{text}</p>
+    </div>
+    <LaurelWreath />
+  </div>
+);
+
+const StatsSection = () => {
+  return (
+    <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16">
+      <StatItem number="+9" text="Años de experiencia" />
+      <StatItem number="+40" text="Proyectos entregados" />
+      <StatItem number="+25" text="Empresas" />
+    </div>
   );
 };
 
@@ -167,6 +251,12 @@ export const MotionContainer = ({
         className={twMerge(" pt-0 col-span-1 flex justify-center ")}
         onMouseEnter={isMobile ? undefined : handleMouseEnter}
         onMouseLeave={handleMouseLeave}
+        transition={{
+          type: "spring",
+          stiffness: 300,
+          damping: 30,
+          mass: 0.8
+        }}
       >
         <div
           className={cn(

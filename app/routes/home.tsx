@@ -16,7 +16,7 @@ import {
   useSpring,
   AnimatePresence,
 } from "motion/react";
-import { useRef, useState, type ReactNode, type RefObject } from "react";
+import { useRef, useState, type ReactNode, type RefObject, useEffect } from "react";
 import { MotionValue } from "motion";
 import { FlipWords } from "~/components/FlipWords";
 import { cn } from "~/utils/cn";
@@ -42,14 +42,28 @@ const MiniCard = ({
 }) => {
   return (
     <div className="w-[70px] h-32">
-      <motion.div layoutId={id} className=" ">
+      <motion.div 
+        layoutId={id} 
+        className=""
+        transition={{
+          type: "spring",
+          stiffness: 300,
+          damping: 30,
+          mass: 0.8
+        }}
+        whileHover={{
+          scale: 1.05,
+          rotate: 2,
+          transition: { duration: 0.2 }
+        }}
+      >
         <img
-          className="w-full h-[105px] rounded object-cover object-center"
+          className="w-full h-[105px] rounded object-cover object-center shadow-lg"
           src={img}
           alt="project exmple"
         />
       </motion.div>
-      <span className="font-bold font-title ">{number}</span>{" "}
+      <span className="font-bold font-title">{number}</span>{" "}
     </div>
   );
 };
@@ -66,10 +80,10 @@ export default function Home() {
   });
 
   return (
-    <section className="bg-white ">
+    <section className="bg-white">
       <Navbar />
-      <section className="max-w-5xl mx-auto h-fit pb-12 pt-12  lg:h-[70vh]  ">
-        <div className="flex flex-wrap-reverse md:flex-nowrap items-center justify-between h-full  ">
+      <section className="max-w-5xl mx-auto h-fit pb-12 pt-12 lg:h-[70vh]">
+        <div className="flex flex-wrap-reverse md:flex-nowrap items-center justify-between h-full">
           <h1 className="text-[32px] md:[54px] lg:text-6xl font-title w-full md:w-[63%] leading-snug lg:text-left text-center mt-6 lg:mt-0">
             Hello, I'm Brenda.
             <br /> I'm a{" "}
@@ -96,12 +110,13 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
       <AnimatePresence>
         <div className="h-[128px] my-10">
           {!show && (
             <section
               key={12}
-              className="flex gap-6 justify-center  h-full relative z-20 "
+              className="flex gap-6 justify-center h-full relative z-20"
             >
               <>
                 <MiniCard id="uno" img="/small-easybits.webp" number="01" />
@@ -111,26 +126,26 @@ export default function Home() {
             </section>
           )}
         </div>
+        
         <section
           key={233}
-          className="bg-[url(/cover-m.svg)] lg:bg-[url(/cover.svg)]  bg-bottom md:bg-center  object-contain min-h-dvh scrollbar  "
+          className="bg-black bg-bottom md:bg-bottom object-contain min-h-dvh scrollbar"
           ref={target}
         >
-          <ScrollHorizontal />
+          <ScrollHorizontal show={show} />
         </section>
-      </AnimatePresence>{" "}
+      </AnimatePresence>
+      
       <About
-        text="I am Product & UX Designer that studied economics. I started my tech career as frontend developer to eventually become a Product Designer. I’ve been working on web and mobile applications for more than 9 years and I absolutely love what I do."
+        text="I am Product & UX Designer that studied economics. I started my tech career as frontend developer to eventually become a Product Designer. I've been working on web and mobile applications for more than 9 years and I absolutely love what I do."
         texttwo="I focus on designing complex and functional products that help users and business reach their goals. I really enjoy create experiences that users find useful and easy to understand. If you want to know more about me, know more about what I do , or talk about working together, feel free to email me."
       />
       <Skills
         titles={["UX design", "UI design", "Product Design", "Web design"]}
         images={["/ux.webp", "/ui.webp", "/pd.webp", "/web.webp"]}
       />
-      <div className="overflow-x-hidden box-border w-screen bg-black pt-40">
-        <Gallery />
-        <Footer />{" "}
-      </div>
+      <Gallery />
+      <Footer />
     </section>
   );
 }
@@ -138,7 +153,7 @@ export default function Home() {
 const Gallery = () => {
   const ref = useRef(null);
   return (
-    <main className=" h-[200px] lg:h-[500px]  w-full pt-10 lg:pt-28 relative  -top-40 z-50">
+    <main className=" h-[200px] lg:h-[500px]  w-full bg-black relative   z-50">
       <h2 className="text-white text-center justify-center text-2xl lg:text-4xl  pl-10 md:pl-0 font-title flex items-center">
         Play with my pictures{" "}
         <img
@@ -214,7 +229,7 @@ const GalleryImage = ({
 }: {
   img: string;
   className?: string;
-  ref: RefObject<HTMLElement>;
+  ref: RefObject<HTMLElement | null>;
 }) => {
   return (
     <motion.div
