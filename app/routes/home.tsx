@@ -80,7 +80,7 @@ export default function Home() {
   });
 
   return (
-    <section className="bg-white">
+    <section className="bg-white scrollbar-x-hidden">
       <Navbar />
       <section className="max-w-5xl mx-auto h-fit pb-12 pt-12 lg:h-[70vh]">
         <div className="flex flex-wrap-reverse md:flex-nowrap items-center justify-between h-full">

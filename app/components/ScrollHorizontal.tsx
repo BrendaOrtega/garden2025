@@ -106,7 +106,7 @@ export const ScrollHorizontal = ({ show = false }: { show?: boolean }) => {
                   tags={["Product Design", "Frontend", "Saas"]}
                   title="Deník"
                   description="The agenda to manage appointments, payments and reminders for entrepreneurs and small businesses"
-                  imageClassName="top-16 md:top-20 scale-80 group-hover:scale-90 group-hover:translate-y-10"
+                  imageClassName="top-10 md:top-20 scale-80 group-hover:scale-90 group-hover:translate-y-10"
                 />
                 <MotionContainer
                   link="/projects/constructoken"

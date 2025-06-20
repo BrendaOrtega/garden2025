@@ -247,9 +247,9 @@ export const Suscription = () => {
 
       <div
         onClick={handleClick}
-        className="absolute -right-6 lg:right-16 bottom-2 lg:bottom-16  "
+        className="absolute scale-50 lg:scale-100 overflow-hidden -right-6 md:right-0 lg:right-16 bottom-2 lg:bottom-16  "
       >
-        <span className=" absolute w-full h-full grid place-content-center">
+        <span className=" absolute w-full h-full  grid place-content-center">
           <FaArrowUpLong className="text-white text-2xl mx-auto" />
         </span>
         <CircularButton />
