@@ -55,19 +55,17 @@ export const ScrollHorizontal = ({ show = false }: { show?: boolean }) => {
 
   return (
     <section ref={scrollContainerRef} style={{ height: dynamicHeight }} className="relative">
-      <div className="sticky bg-black top-0 w-full h-screen overflow-hidden">
+      <div className="sticky bg-black top-0 w-full h-screen overflow-hidden ">
         <motion.div
           ref={cardsContainerRef}
           style={{ x }}
-          className="flex h-full items-center relative z-20 pl-4 md:pl-12 lg:pl-24" // Padding inicial
+          className="flex h-full w-full items-center relative z-20 pl-4 md:pl-12 lg:pl-24 " // Padding inicial
         >
           <span className="absolute top-8 left-4 flex md:hidden gap-4">
               <h3 className="text-3xl xl:text-5xl font-title text-white w-fit font-bold ">
               Selected projects
             </h3>
           </span>
-       
-
           {/* Contenido del carrusel */}
           <div className="w-full xl:w-[340px] flex-shrink-0 flex-col gap-4 pr-8 hidden md:flex">
             <h3 className="text-3xl xl:text-5xl font-title text-white font-bold">
@@ -77,7 +75,7 @@ export const ScrollHorizontal = ({ show = false }: { show?: boolean }) => {
               Take a look at my favorites projects
             </p>
           </div>
-          <div className="flex gap-12 lg:gap-20 ">
+          <div className="flex gap-12 lg:gap-20 pr-[90vw] ">
             {show && (
               <>
                 <MotionContainer
@@ -148,7 +146,7 @@ export const ScrollHorizontal = ({ show = false }: { show?: boolean }) => {
         </motion.div>
         <motion.div
           style={{ y: textY, opacity: textOpacity }}
-          className="absolute inset-0 flex items-center justify-center pointer-events-none z-10"
+          className="absolute inset-0 flex items-center justify-center pointer-events-none z-10 "
         >
           <StatsSection />
         </motion.div>
