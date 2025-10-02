@@ -37,6 +37,18 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
+        <script
+          type="module"
+          dangerouslySetInnerHTML={{
+            __html: `
+              import Chatbot from "https://formmy-v2.fly.dev/widget.js"
+              Chatbot.init({
+                chatbotSlug: "mi-chatbot-HWlSTR",
+                apiHost: "https://formmy-v2.fly.dev"
+              })
+            `,
+          }}
+        />
       </head>
       <body suppressHydrationWarning>
         {children}
