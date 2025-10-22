@@ -41,10 +41,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
           type="module"
           dangerouslySetInnerHTML={{
             __html: `
-              import Chatbot from "https://formmy-v2.fly.dev/widget.js"
+              import Chatbot from "https://beta.formmy.app/widget.js"
               Chatbot.init({
                 chatbotSlug: "mi-chatbot-HWlSTR",
-                apiHost: "https://formmy-v2.fly.dev"
+                apiHost: "https://beta.formmy.app"
               })
             `,
           }}
