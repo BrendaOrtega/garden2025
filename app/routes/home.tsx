@@ -165,7 +165,7 @@ const Gallery = () => {
 
       <section
         ref={ref}
-        className="flex items-start gap-6 lg:gap-12  pt-16 h-full relative  "
+        className="flex items-start justify-center gap-6 lg:gap-12  pt-16 h-full relative  "
       >
         <GalleryImage
           ref={ref}
