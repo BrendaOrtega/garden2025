@@ -37,18 +37,18 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
-        <script
-          type="module"
-          dangerouslySetInnerHTML={{
-            __html: `
-              import Chatbot from "https://beta.formmy.app/widget.js"
-              Chatbot.init({
-                chatbotSlug: "mi-chatbot-HWlSTR",
-                apiHost: "https://beta.formmy.app"
-              })
-            `,
-          }}
-        />
+      <script 
+      type="module"
+      dangerouslySetInnerHTML={{
+        __html: `
+        import Chatbot from "https://www.formmy.app/widget.js"
+        Chatbot.init({
+          chatbotSlug: "ghosty_zJkqVJ",
+          apiHost: "https://www.formmy.app"
+        })`
+      }}
+      />
+
       </head>
       <body suppressHydrationWarning>
         {children}
