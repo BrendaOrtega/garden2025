@@ -43,11 +43,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
         __html: `
         import Chatbot from "https://www.formmy.app/widget.js"
         Chatbot.init({
-          chatbotSlug: "ghosty_zJkqVJ",
+          chatbotSlug: "ghosty_ZXiJtJ",
           apiHost: "https://www.formmy.app"
         })`
       }}
       />
+
+
 
       </head>
       <body suppressHydrationWarning>
